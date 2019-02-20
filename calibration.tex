@@ -9,19 +9,21 @@
 
 %Contacts (James Lough <james.lough@aei.mpg.de>, Yuki Inoue <iyuki@ncu.edu.tw>)
 Extracting new science from the observed GWs requires accurate knowledge of the amplitude and timing of the signals. With high SNR detections expected in 3G detectors on the order of 1000, extremely low calibration uncertainty will be necessary for observations to be noise limited.
-\section{Science-driven calibration requirements}
-The exact calibration requirements needed for the scientific objectives of 3G GW observatories are not yet known, but can be estimated. The calibration accuracy not only depends on the signal-to-noise ratio (SNR), but both the detector calibration and the signal calibration are also frequency dependent. Studies are currently underway that take both aspects into account and evaluate the frequency response requirements of the calibration uncertainty.  With a detector network of three 3G detectors we expect about one event per year with $\text{SNR} \sim 1000$. The signals with the highest SNRs give the narrowest limits for GR. To avoid being dominated by calibration errors, we need a calibration \magentacomment{absolute or relative?} to an amplitude of 0.5\%.
 
-The science we can do with detections in third generation detectors that will be limited by calibration include BNS tidal deformation, deviations from GR, and measurements of the Hubble constant. The first two look for deviations from a modeled waveform template, while the latter is based on absolute distance measurements.
-With $\mathcal{O}(1000)$ low-redshift binary neutron-star events, the Hubble constant may be determined to a ${\sim}1\%$ level with Einstein Telescope~\cite{Cai:2016sby}.
+\section{Science-driven calibration requirements}
+The exact calibration requirements needed for the scientific objectives of 3G GW observatories are not yet known, but can be estimated. There are two aspects of calibration uncertainty, the absolute uncertainty and the relative uncertainty. The first tells us how well we understand the total calibration in absolute numbers, while the latter is a frequency-dependent calibration uncertainty with respect to some fixed reference frequency. 
+% We have to consider each individually, depending on the physics we want to study. 
+Looking for deviations from a modeled waveform template, we are mainly concerned with relative calibration uncertainty. In order to understand the absolute distance to the sources, we are most interested in absolute calibration. Additionally, both the detector calibration and the signal \magentacomment{Josh: signal or waveform? Could this just say, "Additionally, the waveform models have a frequency-dependent calibration error. Studies are underway to determine the exact frequency-dependant requirements on both detector and waveform calibration."} calibration are also frequency dependent. Studies are currently underway that take both aspects into account and evaluate the frequency-dependant requirements of the calibration uncertainty. 
+
+The third generation science that will set our calibration requirements include BNS tidal deformation, deviations from GR, and measurements of the Hubble constant. The first two look for deviations from a modeled waveform template, while the latter is based on absolute distance measurements. With $\mathcal{O}(1000)$ low-redshift binary neutron-star events, the Hubble constant may be determined to a ${\sim}1\%$ level with Einstein Telescope~\cite{Cai:2016sby}.
 This would require a sub-percent systematic absolute amplitude calibration.
+The signals with the highest SNRs give the narrowest limits for GR. With a network of three 3G detectors we expect about one event per year with $\text{SNR} \sim 1000$. To avoid being dominated by calibration errors, we need a calibration \magentacomment{absolute or relative?} to an amplitude of 0.5\%.
+
 %From a single binary neutron-star coalescence, the Hubble constant was determined to a fractional uncertainty of ${\sim}15\%$~\cite{Abbott:2017xzu}.
 %If third-generation detectors are able to acquire $10^4$ events of similar quality, the Hubble constant could be determined to ${\sim}0.15\%$---a factor of $\sqrt{10^4}$ better.
 %This would necessitate a systematic uncertainty in the calibration that is better than $0.1\%$ in order for the measurement to not be calibration-limited.
 
-There are two aspects of calibration uncertainty, the absolute uncertainty and the relative uncertainty. The first tells us how well we understand the total calibration in absolute numbers, while the latter is a frequency-dependent calibration uncertainty with respect to some fixed reference frequency. We have to consider each individually, depending on the physics we want to study. Looking for deviations from a modeled waveform template, we are mainly concerned with relative calibration uncertainty. In order to understand the absolute distance to the sources, we are most interested in absolute calibration.
-
-\section{State of the art in calibration}
+\section{State of the art}
 \subsection{Photon calibrators}
 Photon calibrators provide a calibration reference starting from a traceable reference power meter. They use an amplitude modulated laser to apply a photon-recoil force to the test mass. For all large-scale interferometric gravitational-wave detectors, this is the current method of choice for absolute calibration.
 The calibration process involves periodic exhaustive characterizations of the detectors' strain responses across the entire frequency band, along with continuous monitoring at a few select frequencies to track temporal variations in these responses.
@@ -35,7 +37,7 @@ These devices have absolute systematic uncertainties related to how well the geo
 A Virgo prototype~\cite{0264-9381-35-23-235009} has already been deployed, and an improved prototype may achieve a 1\% systematic uncertainty.
 Kagra is designing a dual-mass-distribution calibrator that, when combined with a photon calibrator, may achieve an absolute uncertainty of 0.17\%~\cite{PhysRevD.98.022005}.
 A Newtonian calibrator prototype is also being developed for Advanced LIGO.
-These Newtonian calibrator technologies are still in the very early stages of development, but there is significant work effort in this direction.
+These Newtonian calibrator technologies are still in the very early stages of development, but there is significant effort in this direction.
 %advanced LIGO, advanced Virgo, and KAGRA are all developing Newtonian calibrator technologies.\cite{PhysRevD.98.022005,}
 
 %The design for the {\bf KAGRA} gravity field calibrator incorporates two distinct mass distributions in one rotating mass. One quadrupole and one hexapole, which provide a sort of self calibration of the distance to the test mass.\cite{PhysRevD.98.022005}\par
