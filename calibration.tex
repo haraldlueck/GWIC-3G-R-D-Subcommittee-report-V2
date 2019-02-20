@@ -1,0 +1,57 @@
+%\chapterimage{Figures/balance.jpg} % Chapter heading image
+% https://upload.wikimedia.org/wikipedia/commons/2/27/Bascula_9.jpg
+\chapterimage{Figures/urmeter.jpg} % Chapter heading image
+%https://www.lichtmikroskop.net/elektronenmikroskop/bilder/urmeter.jpg
+\chapter{Calibration}
+%\section{R\&D misc.}
+\label{sec:Calibration}
+\vspace*{-5cm}
+
+%Contacts (James Lough <james.lough@aei.mpg.de>, Yuki Inoue <iyuki@ncu.edu.tw>)
+Extracting new science from the observed GWs requires accurate knowledge of the amplitude and timing of the signals. With high SNR detections expected in 3G detectors on the order of 1000, extremely low calibration uncertainty will be necessary for observations to be noise limited.
+\section{Science-driven calibration requirements}
+The exact calibration requirements needed for the scientific objectives of 3G GW observatories are not yet known, but can be estimated. The calibration accuracy not only depends on the signal-to-noise ratio (SNR), but both the detector calibration and the signal calibration are also frequency dependent. Studies are currently underway that take both aspects into account and evaluate the frequency response requirements of the calibration uncertainty.  With a detector network of three 3G detectors we expect about one event per year with $\text{SNR} \sim 1000$. The signals with the highest SNRs give the narrowest limits for GR. To avoid being dominated by calibration errors, we need a calibration \magentacomment{absolute or relative?} to an amplitude of 0.5\%.
+
+The science we can do with detections in third generation detectors that will be limited by calibration include BNS tidal deformation, deviations from GR, and measurements of the Hubble constant. The first two look for deviations from a modeled waveform template, while the latter is based on absolute distance measurements.
+With $\mathcal{O}(1000)$ low-redshift binary neutron-star events, the Hubble constant may be determined to a ${\sim}1\%$ level with Einstein Telescope~\cite{Cai:2016sby}.
+This would require a sub-percent systematic absolute amplitude calibration.
+%From a single binary neutron-star coalescence, the Hubble constant was determined to a fractional uncertainty of ${\sim}15\%$~\cite{Abbott:2017xzu}.
+%If third-generation detectors are able to acquire $10^4$ events of similar quality, the Hubble constant could be determined to ${\sim}0.15\%$---a factor of $\sqrt{10^4}$ better.
+%This would necessitate a systematic uncertainty in the calibration that is better than $0.1\%$ in order for the measurement to not be calibration-limited.
+
+There are two aspects of calibration uncertainty, the absolute uncertainty and the relative uncertainty. The first tells us how well we understand the total calibration in absolute numbers, while the latter is a frequency-dependent calibration uncertainty with respect to some fixed reference frequency. We have to consider each individually, depending on the physics we want to study. Looking for deviations from a modeled waveform template, we are mainly concerned with relative calibration uncertainty. In order to understand the absolute distance to the sources, we are most interested in absolute calibration.
+
+\section{State of the art in calibration}
+\subsection{Photon calibrators}
+Photon calibrators provide a calibration reference starting from a traceable reference power meter. They use an amplitude modulated laser to apply a photon-recoil force to the test mass. For all large-scale interferometric gravitational-wave detectors, this is the current method of choice for absolute calibration.
+The calibration process involves periodic exhaustive characterizations of the detectors' strain responses across the entire frequency band, along with continuous monitoring at a few select frequencies to track temporal variations in these responses.
+For Advanced LIGO, this process results in an absolute calibration uncertainty of a few percent in amplitude and a few degrees in phase across the majority of the frequency band~\cite{PhysRevD.96.102001}.
+Ultimately, the current photon calibrator implementation in Advanced LIGO has an absolute systematic uncertainty of 0.8\%, set mainly by a combination of uncertainty in the calibration of the NIST-traceable power standard and uncertainty in where the photon-calibrator beams and the interferometer beams impinge on the test masses~\cite{doi:10.1063/1.4967303}.
+%Currently, these calibrators' reference uncertainty is roughly at the 1\% level. This was specifically stated at 0.76\% for the O2 calibration uncertainty for the advanced LIGO detectors.\magentacomment{citation needed} This resulted in a frequency dependent uncertainty between 2\% and 4\% for O2\magentacomment{How does an absolute calibration uncertainty of 0.76\% result in a relative uncertainty of 2\% - 4\%? ,citation needed}. With improvements between O2 and O3 the expectation is that this could be reduced to \magentacomment{a relative uncertainty? of} 0.3\%.\magentacomment{citation needed.} 
+
+\subsection{Newtonian calibrators}
+Newtonian calibrators rely on the Newtonian gravitational interaction between an interferometer test mass and a known arrangement of rapidly rotating calibration masses, with the arrangement often approximating a dipole, hexapole, or other multipole distribution.
+These devices have absolute systematic uncertainties related to how well the geometry of the calibrator, and its distance and orientation with respect to the test mass, can be characterized.
+A Virgo prototype~\cite{0264-9381-35-23-235009} has already been deployed, and an improved prototype may achieve a 1\% systematic uncertainty.
+Kagra is designing a dual-mass-distribution calibrator that, when combined with a photon calibrator, may achieve an absolute uncertainty of 0.17\%~\cite{PhysRevD.98.022005}.
+A Newtonian calibrator prototype is also being developed for Advanced LIGO.
+These Newtonian calibrator technologies are still in the very early stages of development, but there is significant work effort in this direction.
+%advanced LIGO, advanced Virgo, and KAGRA are all developing Newtonian calibrator technologies.\cite{PhysRevD.98.022005,}
+
+%The design for the {\bf KAGRA} gravity field calibrator incorporates two distinct mass distributions in one rotating mass. One quadrupole and one hexapole, which provide a sort of self calibration of the distance to the test mass.\cite{PhysRevD.98.022005}\par
+%{\bf Advanced LIGO} is also working on a Newtonian calibrator for confirmation of the photon calibrator in a similar way to KAGRA.\magentacomment{citation needed} \par
+%{\bf Advanced Virgo} has recently published \cite{0264-9381-35-23-235009}  first tests of such a system and observed less than 1\% statistical uncertainty at some frequencies.\par
+
+\subsection{Other calibration methods}
+Laser frequency can also be used as a reference against which to calibrate an interferometer \cite{Leong2012, PhysRevD.95.062003}. Further R\&D is required to cut down uncertainties from current levels of about 10\% (in Advanced LIGO) to the requirements of 3G observatories.
+It is also possible to fix certain aspects of the calibration using an astrophysical source whose properties are sufficiently well known~\cite{Pitkin:2015kgm}; more work is needed to understand how this technique will inform the calibration for 3G detectors.
+%Laser frequency can also be used as a reference against which to calibrate an interferometer.For detectors without arm cavities (such as GEO 600), test mass motion can be calibrated directly into fractions of a Michelson fringe, and thereby laser wavelength. \greencomment{Dave: But all 3G detectors are planned to have arm cavities, so is this statement relevant?}This can result in test mass actuator calibrations with statistical uncertainties of less than 0.1\%~\cite{Leong2012}.For present and future detectors with arm cavities, this method requires multiple steps and hence introduces more error.Multicolor techniques are also possible~\cite{PhysRevD.95.062003}, where laser light from an arm cavity is interfered with a reference laser, yielding a beat note whose frequency fluctuations can be read out directly.
+%Another calibration method would be to use frequencies as a reference. We can measure frequencies much more precisely than amplitudes. Free swinging Michelson is an example of this technique, though with arm cavities this method has to be done in steps and involves actuating the ITMs through the PUM stage which is weak and introduces more error than what is achievable with PCAL. 
+
+%The arm cavity locking method outlined in the LIGO calibration for GW150914 paper is another example.
+%\cite{PhysRevD.95.062003}
+%This uses a frequency reference which in this case would be an RF LO to measure the beat frequency between the green arm locking signal and the frequency doubled infrared light.
+
+\section{Pathways}
+
+Requirements on the absolute and relative calibration for third-generation detectors are not yet fully known, and dedicated modeling efforts are needed to understand the constraints set by various 3G scientific objectives. 3G detectors may require sub-percent amplitude calibration, potentially necessitating R\&D to improve the capabilities of the current calibration apparatuses; such R\&D is already underway.

@@ -1,0 +1,195 @@
+\chapterimage{Figures/Cryo1.jpg} % Chapter heading image
+% frozen baltic sea @ Stralsund copyright Arne Lueck
+\chapter{Cryogenics}
+%\section{Cryogenics}
+\label{sec:Cryogenics}
+\vspace{-2cm} %to get the table onto the first page. Needs to be adapted in final layout
+A common feature of most designs for future interferometers, is the cryogenic\footnote{which we define here to be less than 123\,K; the range from 80\,--\,123\,K may be considered as "high temperature cryogenics"} operation of the test mass mirrors\cite{ET2011, ISWP:2018} and suspensions. In the gravitational-wave field there is a long history of using cryogenics for improving the sensitivity of the resonant mass (bar) detectors\cite{ColdBars}. 
+More recently, the 100\,m prototype detector CLIO~\cite{CLIO:2008} and the 3\,km GW detector KAGRA\cite{KAGRA2013} in Japan are investigating the use of cryogenic mirrors and suspensions for laser interferometers.
+In CLIO the mirrors were successfully cooled to cryogenic temperatures without observing significant additional noise, proving that active cryo-coolers are a viable candidate for use in future interferometers. KAGRA will be the first cryogenic interferometer to work with astrophysically interesting sensitivity and will provide a valuable test bed for the improvement of future cryogenic interferometer technologies, where the most important unknown problems of cryogenic interferometry should be uncovered. Several other laboratories worldwide operate cryogenic optical cavities for precision measurements\cite{Holger:Munich}, atomic clocks\cite{JunYegroup} and tests of quantum mechanics\cite{CaltechIQIM} and are valuable partners for the development of technologies in cryo-cooling and low noise cryostats. The vibration noise requirements for cryogenic interferometers are much more demanding than they had been for resonant mass detectors.\\
+%Although low vibration cryo-technology was pioneered by the resonant mass detector groups, the optical cryostats pose the new challenge of low \emph{phase noise} measurements in a cryostat.\\
+The 3G detectors: Voyager\cite{Voyager:Inst}, Einstein Telescope\cite{Sathyaprakash:2012jt}, and Cosmic Explorer\cite{CosmicExplorer2017}, are all being designed to use cryogenics for their optics and suspensions.
+
+\begin{table}[h]
+\centering
+%\begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
+\begin{tabular}{ |l||l|l|l|  }
+ \hline
+ \multicolumn{4}{|c|}{Cryogenic interferometers} \\
+ \hline
+ Interferometer & Mirror Temperature [K] & Mirror Material & Suspension \\
+ \hline
+ CLIO           &   20\,K           & Glass     &  Steel wires \\
+ KAGRA          &   20\,K           & sapphire  &  sapphire fibers  \\
+ ET-LF             &   20 or 123\,K    & silicon   &  silicon  \\
+ CE             &   123\,K          & silicon   &  silicon ribbons \\
+ Voyager        &   123\,K          & silicon   &  silicon ribbons \\
+
+ \hline
+\end{tabular}
+\caption[Cryo IFOs]{Parameters of the cryogenic interferometers}
+\label{}
+\end{table}
+
+\begin{tcolorbox}[standard jigsaw,colframe=ocre,colback=blanchedalmond!10!white,opacityback=0.6,coltext=black]
+\paragraph{Thermal Noise}
+The primary benefit of low temperature operation of the mirrors is through the reduced thermal noise:
+\begin{itemize}
+\item Brownian noise of mirror substrate and coating
+\item thermo-optic (thermo-elastic + thermo-refractive) noise of both substrates and coatings
+\end{itemize}
+The relation between the dissipation and the power spectrum of the noise is described by Callen's Fluctuation-Dissipation Theorem~\cite{CaWe1951, Kubo:FDT, Callen:1959}:
+\begin{equation}
+S_x(f) = \frac{k_B T}{\pi^2 f^2} \left| Re \big[ Y(f) \big]\right|
+\label{eq:FDT}
+\end{equation}
+and so we see that the displacement noise, $x(f)$, scales as $\sqrt{T}$. More significantly, many of the material properties of mirror substrates (e.g. sapphire and silicon) and coatings (e.g. GaAs, GaP, $\alpha$-Si), scale in a favorable way with decreasing temperature. This makes \emph{the improvement in the noise substantially larger than the naive $\sqrt{T}$ scaling}.
+\end{tcolorbox}
+
+\paragraph{Robust Operation}
+In addition to the noise improvement, there are a number of operational issues affected by a low temperature environment:
+\begin{enumerate}
+\item Increased thermal conductivity in crystalline substrates and at cryogenic temperatures; this dramatically reduces the thermal gradients in the mirror, and thereby, the induced wavefront distortions due to thermo-elastic deformations of the mirror surface and thermo-refractive lensing in the substrate bulk.
+%\magentacomment{hal: Does dn/dT not also go down considerably at cryogenic temperatures?}
+%\greencomment{Rana: Not really; it has a weak T dependence until very low T}
+%\magentacomment{Depends on what you call weak: Appl. Phys. Lett. 101, 041905 (2012) and https://ntrs.nasa.gov/search.jsp?R=20070021411 2019-01-08T12:51:25+00:00Z}
+\item Zero thermal expansion in silicon at 18 and 123\,K. Not only does this eliminate thermo-elastic noise for stress-free structures, but it also reduces greatly the thermally induced thermo-elastic deformation of the mirror surface from any residual temperature gradients.
+\magentacomment{hal: other values (18 K and 124K) for zero crossings of CTE in OPTICS LETTERS / Vol. 39, No. 11 / June 1, 2014}
+\item Cryo-pumping of the residual gas by the cold (colder than the mirrors) shields surrounding the mirror reduces the gas pressure and thereby the presence of squeeze-film damping.
+\item Improvement of electronic noise in low-noise sensors / actuators used to control the mirrors.
+\magentacomment{hal: only if the electronics are cooled down as well, which is an option separate from cryo optics }
+\item At temperatures below $\sim$20\,K, all thermally induced parameter fluctuations (e.g. thermo-elastic, thermo-refractive, etc.) vanish, as a consequence of the Nernst theorem.
+\magentacomment{hal:Should we not say here: As temperature approaches 0\,K, all thermally ...  It seems odd to pick 20\,K as a threshold}
+\end{enumerate}
+
+
+
+%\section{Current State of the Art}
+%In the gravitational-wave field there is a long history of using cryogenics for improving the sensitivity of the resonant mass (bar) detectors\cite{ColdBars}.
+%In recent years, the 100\,m prototype detector, CLIO~\cite{CLIO:2008}, and the 3\,km GW detector, KAGRA\cite{KAGRA2013}, have investigated the idea of making cryogenic mirrors and suspensions for laser interferometers.
+%In the CLIO, case, the cryogenic operation was done successfully: the mirrors became cold and there was no major introduction of noise. In this way, it was shown that active cryo-coolers are a possible candidate for use in future interferometers. KAGRA will be the first cryogenic interferometer operating at astrophysically interesting sensitivity; many of the import unknown problems with cryogenic interferometry should be exposed there. For those designing future cryogenic interferometers, this would be a valuable learning environment.
+%In addition, there are several laboraties around the world which have been operating cryogenic optical cavities for precision measurement\cite{Holger:Munich}, atomic clocks\cite{JunYegroup}, and tests of quantum mechanics\cite{CaltechIQIM}. These prototypes are valuable in developing the technologies: cryo-cooling, NIR opto-electronics, low noise cryostats. Although low vibration cryo-technology has been pioneered by the resonant mass detector groups, the optical cryostats pose the new challenge of low \emph{phase noise} measurements in a cryostat.
+
+
+
+\section{Requirements}
+For the future 3G GW detectors (whether in the existing facilities or in new, larger facilities), it is envisaged that we will operate the mirrors and the final stage of the mirror suspensions at low temperatures.
+The major requirements are the following:
+\begin{enumerate}
+\item maintain the target cryogenic temperature with sufficient accuracy:
+      \begin{itemize}
+        \item for silicon at 123\,K, the fluctuations must be kept below 0.1\,K
+        \item for sapphire and silicon at $\sim$20\,K, the requirement is less stringent since there is no null in the material properties to reach
+        \item the cryocooling mechanism must be able to compensate for the power absorbed by the mirror as well as the laser power scattered
+        by the mirror into wide angles
+      \end{itemize}
+
+\item the cooldown from room temperature must be fast enough to minimize delays in commissioning time (i.e. the cooldown time should be less than the vacuum pumpdown time)
+
+\item steady-state cooling should be accomplished with a minimum of disturbance:
+      \begin{itemize}
+        \item the surrounding cold shields must be designed to have low backscatter (into the main cavity mode) and low vibration (relative to the mirror), such that the combined amplitude/phase noise is below the quantum noise level achieved with squeezing
+        \item in designs where the suspension fibers/ribbons are used for the steady-state cryocooling, the suspension thermal noise must be kept below the quantum radiation pressure noise
+        \item auxiliary cold links must be designed so as to not produce seismic shorts of the suspension system nor increase the overall suspension thermal noise
+
+      \end{itemize}
+\end{enumerate}
+
+% --- roughly the same for initial/future, so lets leave it out
+% \subsection{3G initial}
+% 100-200 kg mirrors.
+% cold suspension ribbons/fibers.
+% Shield from outside heat load.
+% Absorb O(10 W) of heat from mirror scattered light,
+% whilst avoiding backscatter (currently a limit in Advanced LIGO).
+%
+% \subsection{future}
+% Mirrors of around 1000kg, and 60 cm diameter.
+% How to produce such large optics of sufficient quality?
+% Issues with the annealing / preparation.
+% Large thermal gradients during cooldown?
+
+
+\section{Pathways and required facilities}
+Much of the required technology for cryogenic operations is also required
+in exploring the material properties of mirrors, coatings, etc.
+Unique to the development of the cryogenics techniques would be dedicated
+testbeds. In the initial stages, these may be non-suspended masses where
+thermal control and cryo-cooling ideas can be developed.
+
+To test the low noise aspect of the cryocooling techniques, a suspended
+interferometer must be used, so as to make the tests meaningful. In a
+medium scale (10s of m) interferometer, one can conduct integration testing
+of the overall design (laser, optics, opto-electronics), as well as a
+near-complete cryocooling system.
+
+The suspended prototype should be enough to give confidence to the full design,
+but should not be designed for the full displacement/phase sensitivity
+(i.e. it would take too long to commission if designed in that way).
+Prototype systems at the scale of the Glasgow, GEO\,600, AEI, MIT, and Caltech interferometers
+would be appropriate for these purposes. 
+
+Cooperation with high-energy particle physics, where comparable requirements are addressed, could create valuable synergies.
+
+%\section{Type of collaboration required:  small/large}
+%\begin{enumerate}
+%\item
+%\end{enumerate}
+%\section{Suggested mechanisms}
+
+%\section{Impact/relation to 2G and upgrades}
+
+\section{Cryogenics below 20\,K}
+\label{sec:cryo20}
+Below $\sim20$\,K most thermal noise sources are so small that they are negligible compared to other noise sources (e.g. quantum noise).
+The main motivations in going below 20\,K is to take advantage of the possible dramatic change in material properties (e.g. superconductivity) for the mirrors and suspensions, but also for the mirror sensors and actuators.
+
+A major challenge is the low-noise operation of the GW detectors in the low (<20\,Hz) frequency band. This is not only due to the obvious problems of seismic and gravitational noise, but also to the dynamic range required for the control system.
+Since the mirrors are moving by a significant fraction of the laser wavelength at 0.01\,--\,0.1\,Hz, it is difficult to control that motion without introducing noise at the $10^{-18}$\,m level at $\sim5$\,--\,10\,Hz. The use of cryogenics in the electronics and the magnetic actuators\cite{cryo:OSEM} provides a tremendous benefit in the practical operations. These techniques should be explored in parallel with the more fundamental cryogenic interferometry.
+
+% \subsection{Initial Cooldown}
+% The technological effort to cool the mirrors down to
+% temperatures around 4\,K is not so different from that used to operate the interferometer at 20\,K.
+% The engineering plant is  almost identical both if we use cryogenic fluids or commercial cryo-coolers.
+% The main difference is in the improvement of the heat extraction from the payload and the reduction of the thermal inputs.
+% It follows that the main issue is the optimization of the %\magentacomment{hal: not understandable as written}
+% thermal links  used to transmit the refrigeration power and the fibers for the heat extraction from the mirror.
+
+
+% The control of test masses plays a crucial role in gravitational wave detectors with independent test masses.
+% Payload local control system is meant to slow down and align
+% the mirrors, driving their motion within the range of interferometric error signals.
+% In order to preserve the quasi-inertial state guaranteed at the level of payload suspension point by the seismic attenuator system, only internal forces
+% %\magentacomment{hal: internal to?}
+% should be used.
+% The digital/analog control system needs to be improved; namely by reducing by more than 10x the overall low frequency noise re-injection.
+% The related R\&D will naturally follow the developments of advanced detector implementations. The task will be complicated by the presence of cryostats surrounding the vacuum chambers hosting the payloads and the use of extra viewports should be avoided to limit the thermal input.
+% As consequence the sensing access to the mirror position without significant perturbation of cryostat performance in mirror cooling.
+% This can be done by an extensive use of optical fiber sensors or even inventing new capacitive detectors with SQUID pre-amplifiers from which an almost noiseless error signal can be extracted to drive the actuators.
+% This last element is crucial for applying forces on the different  stages of the payload. The actuators acting on the marionette and the reaction mass are designed to allow active control of the locking and alignment during operation.
+% %\magentacomment{hal:Should this go into the control section?}
+% Small and fast corrections of the mirror position can be obtained, through the marionette, if the mechanical transfer function of the system is taken into account.
+% For example, due to the response of pendulum mechanical filters, the displacement amplitude of the mirror face with respect to that applied to the marionette arms decreases with the frequency.
+% In the advanced detector configuration  magnets are placed on the marionette arms and coils  are set in front of each of them. Through these actuators, it is possible to steer, around the directions perpendicular  to the line  joining the magnet pairs.
+% In order to design the coil - magnet actuators for the marionette and the mirror of the LF interferometer, several constraints must be taken into account.
+% We should consider the effect of the magnetic noise produced by the magnet at 4.2 K,  its magnetization change due to the cooling, the current noise of the coil and the power dissipated by the current flowing in the coil. The use of superconducting wires for the coils is the obvious solution to kill the last contribution, while for the magnet itself it has been demonstrated that with a suitable material choice the Barkausen noise can be kept  well below the threshold set by the low frequency sensitivity of a 3G detector\cite{cryo:OSEM}.
+%
+% In this temperature range it is possible also to develop new push-pull actuators based on Meissner effect, with the great advantage to replace the magnets glued on the mirror or attached to the marionette arms with superconducting thin films coated on the surfaces.
+
+
+% \paragraph{R\&D for lowering the temperature}
+%
+% The optimization of the mirror suspension fibers is the main action to
+% be pursued in order to keep the mirror at temperature below 20\,K.
+% This implies to explore new geometric configurations and new materials
+% being constrained by the need  to have a low suspension thermal noise and
+% at the same time an efficient path to extract the heat power from the mirror.
+%
+% In principle a 4\,K cryostat is not  different from that for 20\,K.  In fact, the final temperature of a double stage cryocooler is in the 4\,K  range, so   this device  can be still used to  achieve this temperature.  It is  far obvious \magentacomment{hal:reword}  that, to get a lower temperature we should reduce the thermal input and/or  use more refrigeration power. An increased number of cry-cooler can imply higher vibration.  In this respect R\&D devoted to design and construct  silent refrigerator machine is highly desirable.
+% Several ideas have been proposed, for example the use of PT cryocooler, with symmetric cold heads and driven at the same helium wave frequency in  opposite phase. However, these devices are not commercial yet and R\&D carried on in collaboration with a cryo-industry is highly recommended.
+%  In order to increase the cooling efficiency and to get a further reduction of the thermal noise contribution, the most powerful approach is to make use \magentacomment{hal:how?} of the liquid helium II (He II), which has great advantages. It limits the vibration noise associated to the other cryogenic fluids  and it provides a powerful way for extracting the heat from the mirrors. Modern large engineering projects for high-energy physics require thermostatic control of working components at the level of 1.8 - 2 K and are constructed with lengths of channels containing He II. The uniqueness of He II is that it contains a superfluid component with zero entropy, which moves through other liquids and solids with zero friction to an extent dependent on the temperature of the liquid. He II is a liquid of extremely low viscosity and very high heat capacity, which prevents small transient temperature fluctuations. Moreover, thanks to its very high thermal conductivity is able to conduct away heat a thousand times better than any metallic conductor like copper.
+%
+% In He II, the heat from a hot surface is carried away by the superfluid component, so in any design with complicated geometry and helium flows, the entire heat load acts on the phase interface. The boiling mechanism involves evaporation from surfaces ad in a \magentacomment{hal:???}  flow of ordinary boiling liquid, the heat influx is uniformly distributed in unit volume of the two-phase mixture. In stratified He II, the heat influx is associated with the interface between the phases, so the He II evaporation rate is increased by a substantial factor. A major feature of boiling in He II is that the evaporation of the superfluid component predominates. The heat load is transported by convection in the superfluid component, and this consequently evaporates more rapidly than does the normal component.
+% When a two-phase flow of He II moves in a heated channel, a droplet structure or mist is formed in the vapor space as the amount of liquid in the stratified flow decreases. In a stratified flow of an ordinary liquid in a large- diameter tube, an increase in the bulk vapor content leads to the vapor becoming superheated and the liquid evaporating completely. In He II one prevents the vapor becoming superheated by encouraging the spontaneous formation of a droplet structure with a large heat-transfer surface, which provides a constant temperature over the channel cross section.
+% An efficient and quiet configuration for cooling the mirror by He II is the bain de Claudet. Here the idea is to provide superfluid helium at atmospheric pressure and to insure continuous refilling from the container of the helium in the normal state. In this way the He II bath is kept in a quiet hydrodynamic status well far from the boiling point . In this case the cold box on top of the seismic attenuator , ancillary to the main one  to which a the mirror is suspended, is an heat exchange filled by superfluid helium at atmospheric pressure and operating in the stationary condition of almost zero mass flow.
+%\magentacomment{hal:a sketch may be helpful, although the level of technical detail is already too high. Can we point to some reference and dramatically shorten the subsection?}

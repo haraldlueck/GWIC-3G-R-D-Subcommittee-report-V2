@@ -1,0 +1,169 @@
+%\documentclass[url,11pt]{article}
+\documentclass[url,11pt]{book}
+
+
+\usepackage{hyperref}
+\usepackage[usenames,table,dvipsnames,svgnames]{xcolor}
+\usepackage{pdfpages}
+\usepackage[squaren]{SIunits}
+\usepackage{acronym}
+\usepackage{etoolbox}
+\usepackage{multicol}
+ \usepackage{vwcol}
+\usepackage{placeins}
+\usepackage[absolute]{textpos}
+
+
+\hypersetup{colorlinks=true,
+            pdfstartview=FitV,
+            linkcolor=Blue,
+            citecolor=MediumBlue,
+            urlcolor=IndianRed}
+
+
+
+%%%%%% Useful for draft editing
+
+\usepackage{ulem} \normalem
+
+\newcommand{\redcomment}[1]{{\noindent\color{red}{\it [[#1]] }}}
+\newcommand{\bluecomment}[1]{{\color{blue}{\it[[#1]]}}}
+\newcommand{\magentacomment}[1]{{\color{magenta}{[[ #1]]}}}
+\newcommand{\greencomment}[1]{{\color{green}{[[ #1]]}}}
+\newcommand{\redcommenttwo}[1]{{\color{red}{[[ #1]]}}}
+\providecommand{\todo}[1]{{\color{red}$\blacksquare$~\textsf{[TODO: #1]}}}
+\newcommand{\highlight}[1]{\colorbox{yellow}{#1}}
+\newcommand{\strike}[1]{{\color{red}\sout{#1}}}
+\newcommand{\redtext}[1]{{\noindent\color{red}{\it #1 }}}
+\newcommand{\soutthick}[1]{%
+    \renewcommand{\ULthickness}{1.5pt}%
+       {\color{red}\sout{#1}}}%
+    \renewcommand{\ULthickness}{.4pt}% Resetting to ulem default
+\newcommand{\replace}[2]{{\soutthick{#1}\redtext{#2}}}
+\newcommand{\subsubsubsection}[1]{\medskip \noindent\textbf{#1} }
+
+\addunit{\parsec}{pc}
+\addunit{\annum}{a}
+\addunit{\yr}{yr}
+
+% Toggling bibio and title page for subfiles
+\def\biblio{\bibliographystyle{unsrt}\bibliography{mm_references}}
+\newtoggle{standalone}
+\toggletrue{standalone}
+
+% common definitions
+\input{defs.tex}
+
+\newacronym{\CE}{CE}{Cosmic Explorer}
+\newacronym{\ET}{ET}{Einstein Telescope}
+\newacronym{\gwic}{GWIC}{Gravitational Wave International Committee}
+\newacronym{\gwac}{GWAC}{Gravitational Wave Agencies Correspondents}
+
+\textwidth 6in
+\oddsidemargin 0.25 in
+\textheight 8.5in
+\topmargin -0.25in
+%\input{structure}
+\begin{document}
+%\dosecttoc
+
+\def\biblio{} % avoids biblio to be reproduced for every subfiles
+\togglefalse{standalone}
+
+%\linenumbers
+\title{GWIC 3G R\&D Subcommittee Report }
+\input{authors.tex}
+\date{\today}
+\maketitle
+\tableofcontents
+\newpage
+\chapter{Research and development for a 3G GW observatory network}
+\label{chap:RaD}
+
+\input{Introduction.tex}
+
+%\clearpage
+%\input{ExecSummary.tex}
+%\clearpage
+%\input{Current_View_of_Future_Detectors.tex}
+\clearpage
+
+%\cleardoublepage
+\FloatBarrier
+
+\begin{textblock*}{297mm}(0mm,0mm)\includegraphics[width=\paperwidth]{Figures/RotatedArtisticView2.jpg}
+\end{textblock*}
+\input{Facilities_and_Infrastructures.tex}
+
+\clearpage
+%\cleardoublepage
+\FloatBarrier
+\begin{textblock*}{297mm}(0mm,0mm)\includegraphics[width=\paperwidth]{Figures/Background.pdf}
+\end{textblock*}
+\input{Core_Optics.tex}
+
+
+\clearpage
+%\cleardoublepage
+\FloatBarrier
+\begin{textblock*}{297mm}(0mm,0mm)\includegraphics[width=\paperwidth]{Figures/Background.pdf}
+\end{textblock*}
+\input{coatings.tex}
+\clearpage
+%\cleardoublepage
+\FloatBarrier
+\begin{textblock*}{297mm}(0mm,0mm)\includegraphics[width=\paperwidth]{Figures/Background.pdf}
+\end{textblock*}
+\input{Cryogenics}
+\clearpage
+%\cleardoublepage
+\FloatBarrier
+\begin{textblock*}{297mm}(0mm,0mm)\includegraphics[width=\paperwidth]{Figures/Background.pdf}
+\end{textblock*}
+\input{Newtonian_Noise}
+%\clearpage
+\input{unassigned_RaD_items.tex}
+\clearpage
+%\cleardoublepage
+\FloatBarrier
+\begin{textblock*}{297mm}(0mm,0mm)\includegraphics[width=\paperwidth]{Figures/Background.pdf}
+\end{textblock*}
+\input{Suspension_and_Isolation}
+\clearpage
+\FloatBarrier
+\begin{textblock*}{297mm}(0mm,0mm)\includegraphics[width=\paperwidth]{Figures/Background.pdf}
+\end{textblock*}
+\input{Light_Sources}
+
+\clearpage
+\FloatBarrier
+\begin{textblock*}{297mm}(0mm,0mm)\includegraphics[width=\paperwidth]{Figures/Background.pdf}
+\end{textblock*}
+\input{Quantum_Enhancements}
+\clearpage
+\FloatBarrier
+\begin{textblock*}{297mm}(0mm,0mm)\includegraphics[width=\paperwidth]{Figures/Background.pdf}
+\end{textblock*}
+\input{Aux_Optics}
+\clearpage
+\FloatBarrier
+\begin{textblock*}{297mm}(0mm,0mm)\includegraphics[width=\paperwidth]{Figures/Background.pdf}
+\end{textblock*}
+\input{Sim_and_Control}
+\clearpage
+\input{Summary}
+
+
+\clearpage
+\addcontentsline{toc}{section}{Appendix}
+\appendix
+\input{Participants.tex}
+
+\input{WavelengthChoice}
+
+\clearpage
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{unsrt}
+\bibliography{GWrefs}
+
+\end{document}

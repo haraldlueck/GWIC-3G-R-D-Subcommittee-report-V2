@@ -1,0 +1,87 @@
+\chapterimage{Figures/ArtisticView2.jpg} % Chapter heading image
+%Einstein Telescope artits impression copyright Nikhef
+%\section{Introduction}
+\chapter{Introduction}
+\label{sec:Intro}
+
+In this second part of the report we review the Research and Development needed to construct and operate detectors of "third generation" or "3G" sensitivity. As with the first set of long baseline facilities (LIGO, Virgo, Kagra)\cite{AdvancedVirgo2015,AdvancedLIGO2015,KAGRA2013}, the new 3G facilities will be designed and built to house a number of generations of detectors with increasing sensitivity as technology evolves and new ideas emerge.  Section 3.2 will cover the R\&D needed to build such long-life-time facilities in a cost efficient way.  The remainder of this part will focus on the R\&D required to deliver the first interferometers operational in these 3G facilities.
+
+\begin{figure}[ht]
+\centering
+%\begin{multicols}{2}
+% \begin{vwcol}[widths={1.06,0.84},justify=flush,rule=0pt] 
+%\centering
+%\vspace{-0.15cm}
+%\includegraphics*[width= 1.0 \columnwidth]{Figures/noises_percentiles.pdf}
+%\columnbreak
+\includegraphics*[width= 0.8\textwidth]{Figures/noises_percentiles.pdf}
+\caption{As of 2018, there are two main designs proposed for 3G:  the Einstein telescope (ET) \cite{ET2011} with the goal sensitivity shown in green and Cosmic Explorer (CE) \cite{CosmicExplorer2017} with the pink goal sensitivity.  Also shown are the aLIGO design sensitivity (blue curve) and the goal sensitivity for LIGO Voyager (orange curve). The shades of the curves represent sets of differently distributed source locations.}
+\label{fig:3GSens}
+%\end{vwcol} 
+%\end{multicols}
+\end{figure}
+
+The 3G instruments will be 10 to 20 times more sensitive than 2G in the frequency band above  100\,Hz.  This rises to up to a factor of 100 around 20\,Hz and factors of thousands to millions below 10\,Hz!  Despite their differences in sensitivity the 'enabling technologies' -- the main pillars on which the predictions are based -- for ET and CE are similar. The enabling technologies aim to mitigate 'fundamental noise sources' affecting the instruments:  quantum noise, thermal (Brownian) noise and Newtonian noise. 
+%Seismic noise and residual gas noise have been listed as fundamental noises in the part, but as they are treatable by more expensive technology we do not list them as fundamental here.
+Quantum noise is modified by high laser power, quantum squeezing and interferometer topology; thermal noise in mirror substrates, coatings and suspensions is modified by temperature and material properties (and their behaviour as a function of temperature); Newtonian noise by site choice and subtraction schemes.  
+
+These considerations are not independent. Using low temperatures to reduce Brownian noise necessitates moving away from fused silica optics used in Advanced LIGO and Advanced Virgo. Sapphire and silicon are possibilities.  silicon would require changing the operating wavelength to 1.5 -- 2\,\micro m, necessitating the development of a new suite of lights sources, optical components and detectors.  Material properties as a function of temperature and wavelength coupled to the ability to handle high optical power whilst noiselessly remove heat from the core mirrors lead to considering four operating temperatures:  room temperature and cryogenic temperatures 123\,K, 15\,K and below 5\,K.  Sections \ref{sec:Fac_Inf} to \ref{sec:Newtonian_Noise} consider the state-of-the-art in enabling technologies, the R\&D needed in each area, level of resources needed (broadly bracketed as high, medium, low), and how the R\&D should be organised and coordinated, in order to deliver fully tested subsystems for  timely installation in new 3G facilities. Prototyping will require new test facilities and/or using existing long baseline facilities.
+In addition to fundamental noises, a myriad of technical noise sources and control issues can limit interferometer performance:  parametric instabilities, scattered light, auxiliary optics and systems and length and angular control systems.  The current state-of-the-art in these areas, R\&D needed, and coordination for 3G are reviewed in sections \ref{sec:Aux-optics} and \ref{sec:Sim_Controls}. 
+
+Some text here describing the transition from the current detectors to 3G, via upgrades of the current ones (A+) and Voyager, exploiting the possibilities of the current infrastructures and serving as an almost full scale testbed for some new 3G technologies at the same time.
+
+\begin{tcolorbox}[standard jigsaw,colback=amber!10!white,colframe=red!70!black,coltext=black, title=The Einstein gravitational--wave Telescope (ET)] ET\,\cite{ET2011} is the European concept for a third generation GW \emph{observatory}. In order to reduce the effects of the residual seismic motion, the ET concept provides that it shall be located at a depth of about 100\,m to 200\,m below ground. In its final configuration it shall be arranged as an equilateral triangle of three interlaced detectors, each consisting of two interferometers. The configuration of each detector dedicates one interferometer (ET-LF) to detecting the \textbf{L}ow \textbf{F}requency components of the GW signal (2--40\,Hz), while the other one (ET-HF) is dedicated to the \textbf{H}igh \textbf{F}requency components. The topology of each interferometer will be the double-recycled Michelson layout with Fabry-Perot arm cavities of about 10\,km arm length. In ET-LF, which operates at cryogenic temperature, thermal, seismic, gradient and radiation pressure noise sources are particularly suppressed; in ET-HF, sensitivity at high frequencies is improved by high laser light power circulating in the Fabry--Perot cavities and the use of frequency-dependent squeezed light technologies.
+\end{tcolorbox}
+
+
+
+\begin{tcolorbox}[standard jigsaw,colframe=azure!70!black,colback=azure!20!white,opacityback=0.6,coltext=black, title= LIGO Voyager]
+LIGO Voyager\,\cite{Voyager:Inst,VoyagerDCC2018} is the concept for a new detector in the in the currently existing LIGO observatory facilities aiming at exploiting the possibilities of the existing infrastructures and at the same time demonstrating some of the technologies to be used for the next generation of observatories in new infrastructures.
+Voyager would use heavy (ca.\,200\,kg) cryogenic mirrors with improved coatings and upgraded suspensions made of ultra-pure silicon at a temperature of 123\,K in the existing LIGO vacuum envelope and a laser wavelength of $\sim1.5\,-\,2\,\mu m$. 
+A further factor of 3 increase in BNS range (to 1100\,Mpc) is envisaged with a shift of the low frequency cutoff down to 10 Hz.
+\end{tcolorbox}
+
+\begin{tcolorbox}[standard jigsaw,colframe=antiquefuchsia!80!black,colback=antiquefuchsia!20!white,opacityback=0.6,coltext=black, title=Cosmic Explorer (CE)] 
+CE\,\cite{CosmicExplorer2017} is a US concept, currently envisioning an L-shaped above-ground observatory with 40\,km arm-length, operating a dual recycled arm-cavity enhanced Michelson interferometer mostly employing \emph{Voyager} technology, i.e. an operation temperature of ca. 123\,K, large silicon optics, improved coatings and a laser wavelength of ca. $2\,\mu m$, to allow a power level of 3\,MW in the arm cavities. Frequency-dependent squeezing will improve the quantum limited sensitivity by a factor of three. \end{tcolorbox}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|p{1.5cm}|l|l|l|l|l|l|}
+\hline
+ \multicolumn{8}{|c|}{Current and Future Interferometers} \\
+ \hline
+IFO Cases &aLIGO / AdV &A+ &Voyager &CE (pess.) &CE &ET-LF &ET-HF\\
+\hline
+Arm Length [km] & 4 / 3 &4& 4& 40& 40& 10 &10\\
+\hline
+Mirror Mass [kg]& 40 / 42& 40& 200& 320& 320& 211& 200\\
+\hline
+Mirror Material& silica& silica& silicon& silica& silicon& silicon& silica\\
+\hline
+Mirror Temp [K]& 295& 295& 123& 295& 123& 10& 290\\
+\hline
+Sus Fiber& 0.6m/0.7m& 0.6m& 0.6m& 1.2m& 1.2m& 2m& 0.6m\\
+& SiO2& SiO2&Si&SiO2&Si&Si&SiO2\\
+\hline
+Fiber Type& Fiber& Fiber& Ribbon& Fiber& Ribbon& Fiber& Fiber\\
+\hline
+Input Power [W]& 125& 125& 140& 150& 220& 3& 500\\
+\hline
+Arm Power [kW]& 710 / 700& 750& 3000& 1400& 2000& 18& 3000\\
+\hline
+Wavelength [nm]& 1064& 1064& 2000& 1064& 1550& 1550& 1064\\
+\hline
+NN Suppression& 1& 1& 10& 10& 10& 1& 1\\
+\hline
+Beam Size [cm]& (5.5/6.2) / 6& 5.5/6.2& 5.8/8.4& 12/12& 14/14& 9/9& 12/12\\
+\hline
+SQZ Factor [dB]& 0& 6& 8& 10& 10& 10& 10\\
+\hline
+F. C. Length [m]& none& 300& 300& 4000& 4000& 10000& 500\\
+\hline
+\end{tabular}
+\caption[FutIfos]{Interferometer Parameters for the current Advanced detectors, the upgrades thereof (A+), LIGO Voyager, two different versions of Cosmic Explorer for different assumptions on R\&D progress and the two interferometer types of the Einstein Telescope.}
+\label{FutIfos}
+\end{table}
+\magentacomment{hal: shall we add the parameters for AdV+ here?}
+

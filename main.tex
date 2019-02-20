@@ -1,0 +1,32 @@
+\documentclass[url,11pt,fleqn]{book} % Default font size and left-justified equations
+
+%\input{structure_only_RaD_part_old.tex}
+\input{structure.tex}
+\begin{document}
+
+%\linenumbers
+\part{Research and development for a 3G GW observatory network}
+\label{part:RaD}
+\input{Cover_TOC.tex}
+\input{Introduction.tex}
+\input{Facilities_and_Infrastructures.tex}
+\input{Core_Optics.tex}
+\input{coatings.tex}
+\input{Cryogenics}
+\input{Newtonian_Noise}
+\input{calibration.tex}
+\input{Suspension_and_Isolation}
+\input{Quantum_Enhancements}
+\input{Light_Sources}
+\input{Aux_Optics.tex}
+\input{Sim_and_Control}
+\input{Summary}
+%\addcontentsline{toc}{section}{Appendix}
+\appendix
+\input{Participants.tex}
+\input{WavelengthChoice}
+
+\bibliographystyle{unsrt}
+\bibliography{GWrefs}
+
+\end{document}
