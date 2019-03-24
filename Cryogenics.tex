@@ -3,12 +3,15 @@
 \chapter{Cryogenics}
 %\section{Cryogenics}
 \label{sec:Cryogenics}
-%\vspace{-2cm} %to get the table onto the first page. Needs to be adapted in final layout
+\vspace{-4cm} %to get the table onto the first page. Needs to be adapted in final layout
+
+%\magentacomment{hal: This chapter needs a complete overhaul. The section" Cryogenics below 20\,K feels like an appendix; which it probably is. If this is deemed an important technique for the future it should go into the main part, not after the requirements and pathways.DEM:  I think it is redeemable! }
+
 A common feature of most designs for future interferometers, is the cryogenic\footnote{which we define here to be less than 123\,K; the range from 80\,--\,123\,K may be considered as "high temperature cryogenics"} operation of the test mass mirrors~\cite{ET2011, ISWP:2018} and suspensions. In the gravitational-wave field there is a long history of using cryogenics for improving the sensitivity of the resonant mass (bar) detectors~\cite{ColdBars}. 
 More recently, the 100\,m prototype detector CLIO~\cite{CLIO:2008} and the 3\,km GW detector KAGRA~\cite{KAGRA2013} in Japan are investigating the use of cryogenic mirrors and suspensions for laser interferometers.
 In CLIO the mirrors were successfully cooled to cryogenic temperatures without observing significant additional noise, proving that active cryo-coolers are a viable candidate for use in future interferometers. KAGRA will be the first cryogenic interferometer to work with astrophysically interesting sensitivity and will provide a valuable test bed for the improvement of future cryogenic interferometer technologies, where the most important unknown problems of cryogenic interferometry should be uncovered. Several other laboratories worldwide operate cryogenic optical cavities for precision measurements~\cite{Holger:Munich}, atomic clocks~\cite{JunYegroup} and tests of quantum mechanics~\cite{CaltechIQIM} and are valuable partners for the development of technologies in cryo-cooling and low noise cryostats. The vibration noise requirements for cryogenic interferometers are much more demanding than they had been for resonant mass detectors.
 %Although low vibration cryo-technology was pioneered by the resonant mass detector groups, the optical cryostats pose the new challenge of low \emph{phase noise} measurements in a cryostat.\\
-The 3G detectors: Voyager~\cite{Voyager:Inst}, Einstein Telescope~\cite{Sathyaprakash:2012jt}, and Cosmic Explorer~\cite{CosmicExplorer2017}, are all being designed to use cryogenics for their optics and suspensions.
+The 3G detectors: Einstein Telescope~\cite{Sathyaprakash:2012jt} and Cosmic Explorer~\cite{CosmicExplorer2017}, and also Voyager~\cite{Voyager:Inst}, are all being designed to use cryogenics for their optics and suspensions.
 
 \begin{table}[h]
 \centering
@@ -35,15 +38,15 @@ The 3G detectors: Voyager~\cite{Voyager:Inst}, Einstein Telescope~\cite{Sathyapr
 \paragraph{Thermal Noise}
 The primary benefit of low temperature operation of the mirrors is through the reduced thermal noise:
 \begin{itemize}
-\item Brownian noise of mirror substrate and coating
-\item thermo-optic (thermo-elastic + thermo-refractive) noise of both substrates and coatings
+\item Brownian noise of the mirror substrates and the coatings
+\item thermo-optic (thermo-elastic + thermo-refractive) noise of substrates and coatings
 \end{itemize}
-The relation between the dissipation and the power spectrum of the noise is described by Callen's Fluctuation-Dissipation Theorem~\cite{CaWe1951, Kubo:FDT, Callen:1959}:
+The relation between the dissipation and the power spectrum of the noise is described by Callen's Fluctuation-Dissipation Theorem~\cite{CaWe1951, Kubo:FDT, Callen:1959} and is given by:
 \begin{equation}
-S_x(f) = \frac{k_B T}{\pi^2 f^2} \left| Re \big[ Y(f) \big]\right|
+S_x(f) = \frac{k_B T}{\pi^2 f^2} \left| Re \big[ Y(f) \big]\right|.
 \label{eq:FDT}
 \end{equation}
-and so we see that the displacement noise, $x(f)$, scales as $\sqrt{T}$. More significantly, many of the material properties of mirror substrates (e.g. sapphire and silicon) and coatings (e.g. GaAs, GaP, $\alpha$-Si), scale in a favorable way with decreasing temperature. This makes \emph{the improvement in the noise substantially larger than the naive $\sqrt{T}$ scaling}.
+The displacement noise, $x(f)$, scales as $\sqrt{T}$. More significantly, many material properties of some mirror substrates (e.g. sapphire and silicon) and coatings (e.g. GaAs, GaP, $\alpha$-Si), scale favorably with decreasing temperature. This makes \emph{the improvement in the noise substantially larger than the na\"ive $\sqrt{T}$ scaling}.
 \end{tcolorbox}
 
 \paragraph{Robust Operation}
@@ -56,12 +59,11 @@ In addition to the noise improvement, there are a number of operational issues a
 \item Zero thermal expansion in silicon at 18 and 123\,K. Not only does this eliminate thermo-elastic noise for stress-free structures, but it also reduces greatly the thermally induced thermo-elastic deformation of the mirror surface from any residual temperature gradients.
 \magentacomment{hal: other values (18 K and 124K) for zero crossings of CTE in OPTICS LETTERS / Vol. 39, No. 11 / June 1, 2014, Josh: This one? https://doi.org/10.1364/OL.39.003242}
 \item Cryo-pumping of the residual gas by the cold (colder than the mirrors) shields surrounding the mirror reduces the gas pressure and thereby the presence of squeeze-film damping.
-\item Improvement of electronic noise in low-noise sensors / actuators used to control the mirrors.
-\magentacomment{hal: only if the electronics are cooled down as well, which is an option separate from cryo optics }
-\item At temperatures below $\sim$20\,K, all thermally induced parameter fluctuations (e.g. thermo-elastic, thermo-refractive, etc.) vanish, as a consequence of the Nernst theorem.
-\magentacomment{hal:Should we not say here: As temperature approaches 0\,K, all thermally ...  It seems odd to pick 20\,K as a threshold}
-\end{enumerate}
 
+
+\item As temperature approaches 0\,K, all thermally induced parameter fluctuations (e.g. thermo-elastic, thermo-refractive, etc.) vanish, as a consequence of the Nernst theorem.
+\end{enumerate}
+In addition , whilst not considered here,   electronic noise in sensors / actuators used to control the mirrors, can be reduced by low temperature operation. 
 
 
 %\section{Current State of the Art}
@@ -80,8 +82,7 @@ The major requirements are the following:
       \begin{itemize}
         \item for silicon at 123\,K, the fluctuations must be kept below 0.1\,K
         \item for sapphire and silicon at $\sim$20\,K, the requirement is less stringent since there is no null in the material properties to reach
-        \item the cryocooling mechanism must be able to compensate for the power absorbed by the mirror as well as the laser power scattered
-        by the mirror into wide angles
+        \item the cryocooling mechanism must be able to compensate for the power absorbed by the mirror as well as the laser power scattered by the mirror into wide angles. For typical 3G arm powers of around 3MW, and typical values of absorption (1ppm) and scattering (30ppm) this implies 3W of cooling for the TM and 100W of cooling for the baffles.
       \end{itemize}
 
 \item the cooldown from room temperature must be fast enough to minimize delays in commissioning time (i.e. the cooldown time should be less than the vacuum pumpdown time)
@@ -110,26 +111,81 @@ The major requirements are the following:
 % Large thermal gradients during cooldown?
 
 
-\section{Pathways and required facilities}
-Much of the required technology for cryogenic operations is also required
-in exploring the material properties of mirrors, coatings, etc.
-Unique to the development of the cryogenics techniques would be dedicated
-testbeds. In the initial stages, these may be non-suspended masses where
-thermal control and cryo-cooling ideas can be developed.
+\section{Pathways, required facilities and collaborations}
+%
+For each operating temperature (below 20\,K, 123\,K)
 
-To test the low noise aspect of the cryocooling techniques, a suspended
-interferometer must be used, so as to make the tests meaningful. In a
-medium scale (10s of m) interferometer, one can conduct integration testing
-of the overall design (laser, optics, opto-electronics), as well as a
-near-complete cryocooling system.
 
-Such suspended prototypes should be enough to give confidence to the full design,
-but should not be designed for the full displacement/phase sensitivity
-(i.e. it would take too long to commission if designed in that way).
-Prototype systems at the scale of the Glasgow, GEO\,600, AEI, MIT, and Caltech interferometers
-would be appropriate for these purposes. 
+\begin{enumerate}
+\item demonstrate reliable and timely  heat extraction and required final temperature stability (varies depending on goal material parameters).
+\item demonstrate integration with SIS   (Nb: requirements differ for CE and ET).
+\item demonstrate integration with other subsystems.  eg auxiliary optics  for  wave front control .
+\item system integration and performance  testing on large scale prototypes/detectors.
+\end{enumerate}
 
-Cooperation with high-energy particle physics, where comparable requirements are addressed, could create valuable synergies.
+A key element of any cryogenic implementation is a refrigerator that is as quiet and vibration free as possible. R\&D devoted to design and construct silent refrigerator machine is required.  Several ideas have been proposed, for example the use of PT cryocoolers with symmetric cold heads.  Collaboration with cryogenics industry and the accelerator community is strongly recommended. 
+
+For sapphire core optics at 20\,K:   Items 1 and 3 have been/will be demonstrated using KAGRA.  As the current sensitivity goal of KAGRA is modest at low frequencies, it is not clear how well KAGRA performance will inform item 2 and 4.  May occur with KAGRA upgrade.
+
+Silicon core optics at 18\,K, 123\,K : Items 1-3:  a number of facilities are planned or under construction.  Existing facilities  at Stanford, Caltech and Gingin are currently being reconfigured. A  new facility at Maastricht in Europe has been designed to investigate  both 123K and  below 20\,K. Much of the required technology for cryogenic operation is also needed in the near term for  exploration of  the material properties of mirrors, coatings, etc.  \textit{Tight coordination is needed between these groups to  ensure optimum focus and timely progress.}
+
+Ultimately full system integration tests (Item 4) need to be done on large, sensitive, prototypes, demonstrating sustained high performance.  The prototypes need to be large enough to allow reliable scaling to full size 3G systems.  \textit{\textbf{This is a major undertaking and global collaboration is needed to resource, develop and manage these prototypes}}.  These could be new facilities, or,  potentially, an existing 4\,km facility(ies) could be re-purposed.  This would not only demonstrate technical readiness but would produce detector(s) with a significantly extended range.  This is effectively the Voyager concept.
+
+Cooperation with high-energy particle physics, where comparable requirements are addressed, could create valuable synergies. Furthermore, the use of cryogenics in the electronics and the magnetic actuators\cite{cryo:OSEM} has the potential to be of great benefit. These techniques should be explored in parallel with the more fundamental cryogenic interferometry.
+
+\section{Roadmap}
+
+\textit{Sapphire at 20\,K}
+
+
+\begin{itemize}
+\item  2019-2026  	Use KAGRA to diagnose  feasibility and performance.
+\item  2027  		First Cryogenic downselect.  
+\item  2028-2032  		If GO:  final design and fabrication.
+\end{itemize}
+
+
+
+\textit{Silicon at 	123\,K}
+•  \begin{itemize}
+\item 2019-2025  	R\&D in university labs on 1. and 3.
+\item 2022-2028	Integration testing with SIS and other subsystems  (item 2).
+\item 2028……  	Cryogenic downselect
+\item 2029-2033	Large  Phase noise prototype
+\item 2034-2039		If GO:  final design and fabrication.
+\end{itemize}
+
+
+
+\textit{Silicon at 	18\,K}
+\begin{itemize}
+\item SAME CYCLE AS SILICON AT 123\,K.
+\end{itemize}
+
+Note that it is feasible that both Silicon 123\,K and Silicon 18\,K cryogenic subsystems will be deployed at different 3G facilities.  Depending on facility finding and  technology readiness, it is  feasible, perhaps even likely,  that 3G facilities will initially operate room temperature detectors whilst cryogenic development continues.
+
+
+
+%The development of the cryogenics techniques will need dedicated
+%testbeds. In the initial stages, these may be non-suspended masses where thermal control and cryo-cooling ideas can be developed.
+
+%To test the low noise aspect of the cryocooling techniques, suspended
+%interferometers must be used. In a medium scale  interferometer, one can test the near-complete cryocooling system and conduct integration testing of the overall design (laser, optics, opto-electronics).
+
+%A major challenge is the low-noise operation of the GW detectors in the low (<20\,Hz) frequency band. This is not only due to the obvious problems of seismic and gravitational noise, but also to the dynamic range required for the control system.
+%Since the mirrors are moving by a significant fraction of the laser wavelength at 0.01\,--\,0.1\,Hz, it is difficult to control that motion without introducing noise at the $10^{-18}$\,m level at $\sim5$\,--\,10\,Hz. Ultimately, phase noise prototype interferometers for 124K and below 20K must be built.   
+
+%Such suspended prototypes should be enough to give confidence in the full design,
+%but should not be designed for the full displacement/phase sensitivity
+%Prototype systems at the scale of the GEO\,600, AEI, MIT, and Caltech interferometers
+%would be appropriate for these purposes along with lesson learned from KAGRA operation
+
+
+
+\magentacomment{dem: cross referencing to suspension and isolation}
+
+
+
 
 %\section{Type of collaboration required:  small/large}
 %\begin{enumerate}
@@ -139,13 +195,14 @@ Cooperation with high-energy particle physics, where comparable requirements are
 
 %\section{Impact/relation to 2G and upgrades}
 
-\section{Cryogenics below 20\,K}
-\label{sec:cryo20}
-Below $\sim20$\,K most thermal noise sources are so small that they are negligible compared to other noise sources (e.g. quantum noise).
-The main motivations in going below 20\,K is to take advantage of the possible dramatic change in material properties (e.g. superconductivity) for the mirrors and suspensions, but also for the mirror sensors and actuators.
+%\section{Cryogenics below 20\,K}
+%\label{sec:cryo20}
+%Below $\sim20$\,K most thermal noise sources are so small that they are negligible compared to other noise sources (e.g. quantum noise).
+%The main motivations in going below 20\,K is to take advantage of the possible dramatic change in material properties (e.g. superconductivity) for the mirrors and suspensions, but also for the mirror sensors and actuators.
 
-A major challenge is the low-noise operation of the GW detectors in the low (<20\,Hz) frequency band. This is not only due to the obvious problems of seismic and gravitational noise, but also to the dynamic range required for the control system.
-Since the mirrors are moving by a significant fraction of the laser wavelength at 0.01\,--\,0.1\,Hz, it is difficult to control that motion without introducing noise at the $10^{-18}$\,m level at $\sim5$\,--\,10\,Hz. The use of cryogenics in the electronics and the magnetic actuators\cite{cryo:OSEM} provides a tremendous benefit in the practical operations. These techniques should be explored in parallel with the more fundamental cryogenic interferometry.
+
+
+
 
 % \subsection{Initial Cooldown}
 % The technological effort to cool the mirrors down to
