@@ -3,8 +3,26 @@
 \chapter{Summary}
 \label{sec:Summary}
 
-Prioritize R\&D items by timelines and complexity (Infra and Fac most urgent, solutions known, large cost saving potential), 
-Coatings and 3G optics (no clear path forward but a little less time critical) 
+
+Prioritize R\&D items by timelines and complexity?
+\begin{itemize}
+\item Infra and Fac most urgent, solutions known, large cost saving potential), 
+\item Coatings and 3G optics (no clear path forward but a little less time critical), 
+\item simulation (on a good path, adequate level of activities ongoing and globally organised), 
+\item controls (regained attention from efforts to push current detectors to lower frequencies where control noises dominate; benefiting from another wave in machine learning activities throughout different engineering and science sectors; not time critical for 3G but potentially very rewarding for 2G+ detectors), 
+\item Quantum enhancements (squeezing work considered to be understood and mostly technologically limited now; beneficial for 2G+ and
+\end{itemize}
+Provide some kind of Matrix with technical readiness requirements vs. time?
+See figure \ref{fig:maturity}
+\begin{figure}[h]
+\centering
+\includegraphics*[width= \textwidth]{Figures/3G_Readiness_Levels.pdf}
+\caption{Required and expected technical readiness levels for various subsystems.\\
+OR required technical readiness levels for ET and CE\\
+or something similar\\
+Technical readiness Levels: TR1: xxx, TR2:yyy, TR3:zzz, TR4: implementation}
+\label{fig:maturity}
+\end{figure}
 
 \magentacomment{Josh: Here I pasted some remarks from quantum noise that Dave suggested be moved to general considerations.} 
 
@@ -106,13 +124,111 @@ Cooperation with high-energy particle physics, where comparable requirements are
 Note that it is feasible that both Silicon 123\,K and Silicon 18\,K cryogenic subsystems will be deployed at different 3G facilities.  Depending on facility finding and  technology readiness, it is  feasible, perhaps even likely,  that 3G facilities will initially operate room temperature detectors whilst cryogenic development continues.
 
 \subsection{Newtonian Noise}
+The main facilities of NN R\&D are the natural environments of 3G detector candidate sites. In addition, since we have very little experience in observing and modelling underground seismic and sound fields, underground studies done anywhere can provide important information. There are significant differences between sites in terms of sources of environmental disturbance, local geology and topography, so transferring results from one site to another should be done with caution.
 
+Finite-element simulations of environmental fields and algorithms for the optimization of array configurations for noise cancellation are computationally expensive. Significant computing time on clusters will be required. 
+
+Collaboration between groups is strongly recommended with respect to site characterization. It requires substantial expertise to set up robust, high-quality environmental measurements, to understand, which properties of environmental fields need to be understood, and how to analyze environmental data. Collaboration is also encouraged between groups working on numerical simulations to share generic knowledge, e.g., of how to assess accuracy of numerical simulations, e.g., by comparing simulations using different software, or by running simple simulations that allow comparison with analytic models.
 \subsection{Light Sources}
+Like in the past a strong collaboration between a group within the GWD community and a laser research lab or industry is required (like e.g.  AEI/LZH, Artemis/Alphanov, ICRR/Mitsubishi) to design and build suitable HPLs at the different wavelengths. As the different wavelengths need different solutions a loose collaboration between the respective wavelength groups would be advantageous. It would be desirable to have at least two collaborations to work on laboratory prototype solutions for each wavelength to explore different concepts and alternative technical solutions. These groups should have a strong connection with regular meetings to exchange results and ideas. This approach would possibly avoid a single supplier problem.
+No particular collaborations are required for the squeezing research. The normal exchange of concepts and results at collaboration meetings and conferences seems sufficient. 
+
+\subsubsection{Road map}
+\subsection*{HPL 1064\,nm}
+\begin{itemize}
+	\item 2019 - 2020 : continue development and reliability studies of 2G PSL systems at the 250\, W level and perform coherent combination demonstration experiments at high powers
+	\item 2021 - 2024 : engineering prototype (see section \ref{sec:pathway}) 500\,W HPL and conceptual test of stabilization and spatial filter solutions
+	\item 2024 - ... : final design and fabrication of HPL with the initial 3G requirements within specific 3G GWD project, in parallel R\&D on path toward the final 3G requirements 
+\end{itemize} 
+
+
+\subsection*{HPL ${\bf 1.5 - 2.1 \, {\bf \mu m}}$}
+\begin{itemize}
+	\item 2019 - 2021 : identify concepts for a 1\,kW HPL that fulfills the stringent 3G GWD HPL requirements (most likely several coherently combined stages)
+	\item 2022 - 2024 : 1\,kW HPL functional prototype phase (see section \ref{sec:pathway})
+	\item 2024 - 2028 : 1\,kW HPL engineering prototype phase (see section \ref{sec:pathway})
+	\item 2028 - ... : final design and fabrication of HPL with the initial 3G requirements within specific 3G GWD project, in parallel R\&D on path toward the final 3G requirements
+\end{itemize} 
+
+
+\subsection*{squeezed light sources for 3G GWDs}
+\begin{itemize}
+	\item 2019 - 2026 : continue laboratory based R\&D on squeezed light sources at all wavelength, potentially involve industrial partners to design and fabricate low loss optical components
+	\item 2026 - ... : final design and fabrication within specific 3G GWD project
+\end{itemize}
 \subsection{Quantum enhancements}
+A significant R\&D effort is required to make an informed selection of the optimal quantum noise reduction strategies for 3G detectors and to enable their risk free application to maximise the science return of 3G observatories. Additionally, we recommend the development of unified classification scheme of QND techniques and common approach to analysing and comparing their performances.  
+
+\magentacomment{hal: timelines???}
+
 \subsection{Suspensions and Seismic Isolation Systems}
+
+It is important to note that it has typically taken 10-15 years to take suspension and seismic isolation hardware from prototype designs to interferometer installation. Thus prototypes for 3G suspension and isolation systems are an essential step to take in the near future. These can start with small scale (bench top) prototypes. However full-scale test facilities will also be needed. 2G facilities such as LASTI (MIT), the 40m detector (Caltech), Gingin (Western Australia)
+% (others e.g. in Virgo and Kagra) 
+or upgrades to those can be used as test beds for 3G ideas. There is also a pressing need for new prototypes, especially for cryogenic testing, such as ``ET pathfinder."
+
+\subsubsection{Type of collaboration required and suggested mechanisms}
+
+Several small-scale collaborations across detector groups in different countries already exist and we expect these to continue.  Ideas and results can be shared and discussed at existing meetings such as GWADW or other meetings such as ET workshops. No other large collaborations are currently envisioned.
+
+\magentacomment{hal: timelines???}
 \subsection{Auxiliary Optics}
+
+\paragraph{\bf Light sources} Many of the auxiliary optics subsystems will be strongly impacted by the choice of laser wavelength. Beyond this, the input optics has a direct interface with the light source, and so information exchange between groups performing R\&D in these two areas will be critical.
+\subsubsection{\bf Quantum noise} The output optics subsystem will be closely linked to the quantum noise working groups as squeezing is foreseen in all future detectors. Close collaboration between these groups will therefore be beneficial.
+
+\magentacomment{hal: timelines???}
 \subsection{Simulation and Controls}
+\subsubsection{roadmap Sim}
+Simulation tools are strongly defined through the context in which they are used. Many of the priorities for the research and development directly translate into a priority task for modelling work or a required effort in developing new capabilities for simulation tools. In particular the progress in modelling tools or modelling itself is not limited by development of technologies or methods, but by the available person power.
+
+%%% -------------------------------------------------------------------------
+\subsubsection{Recommendations Sim}
+To address the above challenges, the current portfolio of software tools must be updated, either by extending the existing software or by providing new dedicated tools. The detailed list of code changes or required features goes beyond the scope of this document. The following are recommendations for the higher-level actions to support an effective and open environment for this effort.
+
+\noindent{\textbf{Additional software}}
+Most of the required modelling tasks can be performed by extending and updating the available tools, some of which is already well underway. However some missing functionality might be better achieved by developing new software. Needed packages include an easy to use and flexible time-domain simulation, a 3D beam tracing software dedicated to ground based detectors and a comprehensive modelling software for various suspension systems capable of computing the thermal noise of all elements. In addition, commercial tools should be reviewed to understand when these are superior to custom made tools, for example, for more common optics tasks such as modelling stray light.
+
+\noindent{\textbf{Resources}}
+We encourage institutions to increase support for the development and use of simulation tools over the next 5 years, a crucial time for the design of 3G instruments, and for upgrades to current detectors.
+%, while the commissioning of detectors will push the limits of current technology. 
+Experience has shown that
+individual post-docs and PhD students can provide effective tools that are quickly adopted and used by a wide community. However, those tools often come only with rudimentary or outdated documentation and code reviews or formal testing of simulation results are not common practice. We recommend additional, dedicated post-doc support in this area to mitigate this.
+
+\noindent{\textbf{Collaboration and coordination}}
+Coordination between research groups and projects is important in three ways:
+code development is often done by few individuals in each project who will benefit from having a forum to discuss priorities as well as technical challenges. The same is true for the collaboration between people
+%undertaking the code development and those 
+doing modelling, often 
+%Modelling tasks (design or commissioning) are often 
+investigating a new or not-understood behaviour;
+collaboration with other scientists investigating similar or related aspects has been shown to greatly reduce the time to reaching a conclusion. We recommend to continue (or establish) working groups dedicated to the interferometer modelling within projects and 
+%for these working groups 
+to organize workshops/meetings adjacent to international meetings.
+
+\noindent{\textbf{Software and code distribution}}
+Accessibility of the software, and ideally the source code, should be improved. Each software tool should have: a) an active maintainer who is responsible for the current code base and who can be identified and reached by any users of the software, b) a single, discoverable web page hosting the master version of the tool or code under a clear and permissible software license, c) documentation about the implemented models and their limitations, including descriptions of mathematical algorithms, or parameter sets used and d) training material, such as a set of examples and tutorials for new users, especially graduate students. Where possible (without breaking existing compatibility) the adoption of common  input and output formats, for example, for files storing interferometer parameters  should be encouraged.
+
+The effectiveness of specific tools is often not defined by the a single feature but by a network effect based on many factors. Any tool benefits greatly from a large user base, for example, through receiving bug reports and the availability and diversity of examples as well as experts on how to use the specific tool. And the impact of a modelling tool is improved significantly by a strong track record and trust by the wider community. We recommend that software maintainers adopts the aim of making the software as accessible as possible without compromising its core functionality. %Similarly we recommend that groups distributing software make an effort in providing training material or training opportunities for new users. The quality and effectiveness of simulation tools can be greatly enhanced by a large and informed active user base.
+
+Those software tools that aim at providing standard results for the wider community must also provide the official data sets or model files, such as, for example default LIGO models for \textsc{Finesse}. The GWINC software package should provide standard noise budgets for all envisaged detectors and the
+collaborations should establish a mechanism to review its noise models by the international community.
+
+\noindent{\textbf{Source code maintenance}}
+Some important simulation tools date back to their original development in the 80s and 90s. Given the rapid development of computing and computer languages, it could be beneficial to re-implement these in modern frameworks. At the same time the experience and knowledge acquired with the originals should not be lost in the process. A careful development process and code design that finds a balance between modern technology and backwards compatibility
+is recommended. Some codes, such as \textsc{Finesse} and GWINC are currently undergoing such a process. Other software should be reviewed for similar updates.
+
+\subsubsection{Roadmap Controls}
+Similarly to simulations, progress in the development of the required controls is not defined by future technical breakthroughs in the topic itself. Instead we can adapt techniques that have been developed in other areas, such as modern control techniques. Simulation tools can play a crucial role for designing control techniques and they should be further developed or extended for this purpose.
+More advanced techniques, such as adaptive control or machine learning, might need different and more powerful hardware to run, for example dedicated FPGAs or GPUs. 
+It is important to advance the control design compared to other subsystems, so that controls can inform the overall system design, which allows to avoid mistakes that make the control harder or impossible. Prototype interferometers have to be used for the experimental validation of control schemes when these incorporate a more fundamental change, whereas other techniques might be implemented and tested directly in current detectors.
+
+
+\subsubsection{Recommendations Controls}
+Control noise, or cross-coupling of fundamental noise through control channels, has historically limited GW detectors, especially at the low-frequency end of the measurement band. The requirements of 3G detectors will pose a great challenge to control systems. Control schemes should be developed and tested early as an integral part of detector designs. Synergies with commissioning and detector upgrades should be sought out. At the same time, care should be taken that sufficient theoretical work and tests at prototype interferometers are performed for new control designs that cannot be tested with current detectors.
+
 \subsection{Calibration}
 
+Requirements on the absolute and relative calibration for third-generation detectors are not yet fully known, and dedicated modeling efforts are needed to understand the constraints set by various 3G scientific objectives. 3G detectors will likely require well sub-percent amplitude calibration, potentially necessitating R\&D to improve the capabilities of the current calibration apparatuses; such R\&D is already underway and cooperation activities between the different GW collaborations are considered to be at an adequate and sufficient level. 
 
 \input{ExecSummary.tex}
