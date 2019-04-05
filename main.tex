@@ -3,11 +3,16 @@
 %\input{structure_only_RaD_part_old.tex}
 \input{structure.tex}
 \begin{document}
-
+\newcounter{boxcount}
+\setcounter{boxcount}{1}
 %\linenumbers
 \part{Research and development for a 3G GW observatory network}
 \label{part:RaD}
-\input{Cover_TOC.tex}
+\pagenumbering{roman}
+%\input{Cover_TOC.tex}
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
 \input{Introduction.tex}
 \input{Facilities_and_Infrastructures.tex}
 \input{Core_Optics.tex}
@@ -23,9 +28,26 @@
 \input{Summary}
 %\addcontentsline{toc}{section}{Appendix}
 \appendix
-%\input{Participants.tex}
-%\input{WavelengthChoice}
-
+ \titleformat{\chapter}[display]
+    {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\clearpage
+\pagenumbering{arabic}% resets `page` counter to 1
+\renewcommand*{\thepage}{A\arabic{page}}
+\input{Appendix_Core_Optics.tex}
+\clearpage
+\pagenumbering{arabic}% resets `page` counter to 1
+\renewcommand*{\thepage}{B\arabic{page}}
+\input{Appendix_Coating.tex}
+%\clearpage
+%\pagenumbering{arabic}% resets `page` counter to 1
+%\renewcommand*{\thepage}{C\arabic{page}}
+%\input{Appendix_Aux_Optics.tex}
+%\clearpage
+%\pagenumbering{arabic}% resets `page` counter to 1
+%\renewcommand*{\thepage}{D\arabic{page}}
+%\input{Appendix_Sim_and_Control.tex}
+%\pagenumbering{roman}% resets `page` counter to 1
+\renewcommand*{\thepage}{\roman{page}}
 \bibliographystyle{unsrt}
 \bibliography{GWrefs}
 

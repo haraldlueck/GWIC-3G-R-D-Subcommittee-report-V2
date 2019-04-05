@@ -380,6 +380,7 @@ innerbottommargin=5pt]{cBox}
 \usepackage{doi}
 \usepackage{subcaption}
 \usepackage{mathtools}
+\usepackage{textcomp}
 \usepackage{upgreek}
 \usepackage{stfloats}
 \usepackage{afterpage}
@@ -435,8 +436,16 @@ innerbottommargin=5pt]{cBox}
 \usepackage[absolute]{textpos}
 \usepackage{ulem} \normalem
 \usepackage{tcolorbox}
+\usepackage{wrapfig}
 \newcommand{\redcomment}[1]{{\noindent\color{red}{\it [[#1]] }}}
 \newcommand{\bluecomment}[1]{{\color{blue}{\it[[#1]]}}}
 \newcommand{\magentacomment}[1]{{\color{magenta}{[[ #1]]}}}
 \newcommand{\greencomment}[1]{{\color{green}{[[ #1]]}}}
 \newcommand{\redtext}[1]{{\noindent\color{red}{\it #1 }}}
+
+
+\newtcolorbox[auto counter]{DetBox}[2][]{%
+standard jigsaw,colframe=green!40!black,colback=blanchedalmond!10!white,opacityback=0.6,coltext=black,oversize, size=small, title=Infobox~\theboxcount: #2,#1}
+
+\newtcolorbox[auto counter]{Infobox}[2][]{%
+standard jigsaw,colframe=ocre,colback=blanchedalmond!10!white,opacityback=0.6,coltext=black, size=small, title=Infobox~\theboxcount: #2,#1}
