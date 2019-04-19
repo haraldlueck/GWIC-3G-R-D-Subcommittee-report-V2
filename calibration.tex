@@ -5,7 +5,7 @@
 \chapter{Calibration}
 %\section{R\&D misc.}
 \label{sec:Calibration}
-%\vspace*{-2cm}
+\vspace*{-2cm}
 
 %Contacts (James Lough <james.lough@aei.mpg.de>, Yuki Inoue <iyuki@ncu.edu.tw>)
 Extracting new science from the observed gravitational waves requires accurate knowledge of the amplitude and timing of the signals. With the very high signal to noise ratios (SNR), up to 1000, expected in the 3G era, extremely low calibration uncertainty will be necessary for observations to be noise limited.
@@ -23,9 +23,13 @@ The signals with the highest SNRs give the narrowest limits for GR. With a netwo
 %This would necessitate a systematic uncertainty in the calibration that is better than $0.1\%$ in order for the measurement to not be calibration-limited.
 
 \section{State of the art}
+Overall calibration relies on both technologies and methods of measuring the detector’s control systems. The development of technologies important for calibration are discussed in the following subsections. The methods are generally platform specific, but the state of the art in calibration methods involve the use of MCMC simulation to determine unknown systematic uncertainties \cite{CalUncert2017}.
+
+The detector's control system (sensing and actuation) has a considerable influence on the accuracy of the total calibration accuracy and therefore has to be precisely characterized for the calibration of each gravitational wave detector. Time dependent correction factors have to be monitored online using  calibration lines.
+
 \subsection{Photon calibrators}
-Photon calibrators provide a calibration reference starting from a traceable reference power meter. They use an amplitude modulated laser to apply a photon-recoil force to the test mass. For all arm-cavity interferometric gravitational-wave detectors, this is the current method of choice for absolute calibration.
-The calibration process involves periodic exhaustive characterizations of the detectors' strain responses across the entire frequency band, along with continuous monitoring at a few select frequencies to track temporal variations in these responses.
+Photon calibrators provide a calibration reference starting from a traceable reference power meter. They use an amplitude modulated laser to apply a photon-recoil force to the test mass. For all interferometric gravitational-wave detectors with arm cavities, this is the current method of choice for absolute calibration.
+The calibration process involves periodic characterizations of the detectors' strain responses across the entire frequency band, along with continuous monitoring at a few select frequencies to track temporal variations in these responses.
 For Advanced LIGO, this process results in an absolute calibration uncertainty of a few percent in amplitude and a few degrees in phase across the majority of the frequency band~\cite{PhysRevD.96.102001}.
 Ultimately, the current photon calibrator implementation in Advanced LIGO has an absolute systematic uncertainty of 0.5\%, set mainly by a combination of uncertainty in the calibration of the NIST-traceable power standard and uncertainty in where the photon-calibrator beams and the interferometer beams impinge on the test masses~\cite{ALIGOPhotCalib2016, NISTWorkshop2019}. The national metrology institutes are improving the primary laser power calibration standards. On request of LIGO, NIST has improved the laser power standard from 0.44\% error to 0.31\% and is envisioning a level of 0.05\% in the next few years.
 %Currently, these calibrators' reference uncertainty is roughly at the 1\% level. This was specifically stated at 0.76\% for the O2 calibration uncertainty for the advanced LIGO detectors.\magentacomment{citation needed} This resulted in a frequency dependent uncertainty between 2\% and 4\% for O2\magentacomment{How does an absolute calibration uncertainty of 0.76\% result in a relative uncertainty of 2\% - 4\%? ,citation needed}. With improvements between O2 and O3 the expectation is that this could be reduced to \magentacomment{a relative uncertainty? of} 0.3\%.\magentacomment{citation needed.} 
@@ -52,8 +56,6 @@ It is also possible to fix certain aspects of the calibration using an astrophys
 %The arm cavity locking method outlined in the LIGO calibration for GW150914 paper is another example.
 %\cite{PhysRevD.95.062003}
 %This uses a frequency reference which in this case would be an RF LO to measure the beat frequency between the green arm locking signal and the frequency doubled infrared light.
-
-Beside the primary calibration standards, the detector's control system (sensing and actuation) has a considerable influence on the accuracy of the total calibration accuracy and therefore has to be precisely characterized for the calibration of each gravitational wave detector. Time dependent correction factors have to be monitored online 
 
 \section{Roadmap and timeline}
 
