@@ -5,32 +5,40 @@
 \chapter{Calibration}
 %\section{R\&D misc.}
 \label{sec:Calibration}
-\vspace*{-2cm}
+\vspace{-1.8cm}
 
 %Contacts (James Lough <james.lough@aei.mpg.de>, Yuki Inoue <iyuki@ncu.edu.tw>)
+
 Extracting new science from the observed gravitational waves requires accurate knowledge of the amplitude and timing of the signals. With the very high signal to noise ratios (SNR), up to 1000, expected in the 3G era, extremely low calibration uncertainty will be necessary for observations to be noise limited.
 
 \section{Science-driven calibration requirements}
 The exact calibration requirements for the scientific objectives of 3G gravitational-wave observatories are not yet known, but can be estimated. There are two aspects of calibration uncertainty, the absolute uncertainty and the relative uncertainty. The first tells us how well we understand the total calibration in absolute numbers, while the latter is a frequency-dependent calibration uncertainty with respect to some fixed reference frequency. 
-Looking for deviations from a modeled waveform template, we are mainly concerned with relative calibration uncertainty. In order to estimate distances to the sources, we are most interested in absolute calibration. In addition to the calibration error of the detector instrument, the waveform models have a frequency-dependent calibration error. Studies are underway to determine the exact frequency-dependant requirements on both detector and waveform calibration.
+Looking for deviations from a modeled waveform template, we are mainly concerned with relative calibration uncertainty. In order to estimate distances to the sources, we are most interested in absolute calibration.
+In addition to the calibration error of the detector instrument, the waveform models have an uncertainty.
+Studies are underway to determine the exact calibration requirements integrating both detector and waveform uncertainties.
 
 The third generation science that will set our calibration requirements include binary neutron star (BNS) tidal deformation, deviations from GR, and measurements of the Hubble constant. The first two look for deviations from a modeled waveform template, while the latter is based on absolute distance measurements. With $\mathcal{O}(1000)$ low-redshift binary neutron-star events, the Hubble constant may be determined to a ${\sim}1\%$ level with Einstein Telescope~\cite{Cai:2016sby}.
 This would require a sub-percent systematic absolute amplitude calibration.
-The signals with the highest SNRs give the narrowest limits for GR. With a network of three 3G detectors we expect about one event per year with $\text{SNR} \sim 1000$. To avoid being dominated by calibration errors, we need a calibration to an amplitude of <\,0.5\%.
+The signals with the highest SNRs give the narrowest limits for GR. With a network of three 3G detectors we expect about one event per year with $\text{SNR} \sim 1000$. To avoid being dominated by calibration errors, we need a calibration to an amplitude of <\,0.5\% and
+about 0.1 Radian in phase integrated over 10\,Hz to 400\,Hz \cite{SathyaPers2019}.
 
 %From a single binary neutron-star coalescence, the Hubble constant was determined to a fractional uncertainty of ${\sim}15\%$~\cite{Abbott:2017xzu}.
 %If third-generation detectors are able to acquire $10^4$ events of similar quality, the Hubble constant could be determined to ${\sim}0.15\%$---a factor of $\sqrt{10^4}$ better.
 %This would necessitate a systematic uncertainty in the calibration that is better than $0.1\%$ in order for the measurement to not be calibration-limited.
 
 \section{State of the art}
-Overall calibration relies on both technologies and methods of measuring the detector’s control systems. The development of technologies important for calibration are discussed in the following subsections. The methods are generally platform specific, but the state of the art in calibration methods involve the use of MCMC simulation to determine unknown systematic uncertainties \cite{CalUncert2017}.
-
-The detector's control system (sensing and actuation) has a considerable influence on the accuracy of the total calibration accuracy and therefore has to be precisely characterized for the calibration of each gravitational wave detector. Time dependent correction factors have to be monitored online using  calibration lines.
+Overall calibration relies on both technologies and methods of measuring the detector’s control systems. The development of technologies important for calibration are discussed in the following subsections. The state of the art in calibration methods involve the use of MCMC simulation to determine unknown systematic uncertainties.
+\pagebreak
+%\cite{CalUncert2017}.
+The detector's control systems (sensing and actuation) have a considerable influence on the total calibration accuracy and therefore must be precisely characterized for the calibration of each gravitational wave detector.
+Calibration lines are applied using the detector's length actuators in order to compute time dependent correction factors.
+For Advanced LIGO, this process results in an absolute calibration uncertainty of a few percent in amplitude and a few degrees in phase across the majority of the frequency band~\cite{PhysRevD.96.102001}.
+% have to be monitored online using  calibration lines.
 
 \subsection{Photon calibrators}
 Photon calibrators provide a calibration reference starting from a traceable reference power meter. They use an amplitude modulated laser to apply a photon-recoil force to the test mass. For all interferometric gravitational-wave detectors with arm cavities, this is the current method of choice for absolute calibration.
-The calibration process involves periodic characterizations of the detectors' strain responses across the entire frequency band, along with continuous monitoring at a few select frequencies to track temporal variations in these responses.
-For Advanced LIGO, this process results in an absolute calibration uncertainty of a few percent in amplitude and a few degrees in phase across the majority of the frequency band~\cite{PhysRevD.96.102001}.
+%The calibration process involves periodic characterizations of the detectors' strain responses across the entire frequency band, along with continuous monitoring at a few select frequencies to track temporal variations in these responses.
+%For Advanced LIGO, this process results in an absolute calibration uncertainty of a few percent in amplitude and a few degrees in phase across the majority of the frequency band~\cite{PhysRevD.96.102001}.
 Ultimately, the current photon calibrator implementation in Advanced LIGO has an absolute systematic uncertainty of 0.5\%, set mainly by a combination of uncertainty in the calibration of the NIST-traceable power standard and uncertainty in where the photon-calibrator beams and the interferometer beams impinge on the test masses~\cite{ALIGOPhotCalib2016, NISTWorkshop2019}. The national metrology institutes are improving the primary laser power calibration standards. On request of LIGO, NIST has improved the laser power standard from 0.44\% error to 0.31\% and is envisioning a level of 0.05\% in the next few years.
 %Currently, these calibrators' reference uncertainty is roughly at the 1\% level. This was specifically stated at 0.76\% for the O2 calibration uncertainty for the advanced LIGO detectors.\magentacomment{citation needed} This resulted in a frequency dependent uncertainty between 2\% and 4\% for O2\magentacomment{How does an absolute calibration uncertainty of 0.76\% result in a relative uncertainty of 2\% - 4\%? ,citation needed}. With improvements between O2 and O3 the expectation is that this could be reduced to \magentacomment{a relative uncertainty? of} 0.3\%.\magentacomment{citation needed.} 
 
@@ -59,4 +67,5 @@ It is also possible to fix certain aspects of the calibration using an astrophys
 
 \section{Roadmap and timeline}
 
-Requirements on the absolute and relative calibration for third-generation detectors are not yet fully known, and dedicated modeling efforts are needed to understand the constraints set by various 3G scientific objectives. 3G detectors will likely require much better than sub-percent amplitude calibration, potentially necessitating R\&D to improve the capabilities of the current calibration apparatuses; such R\&D is already underway and cooperation activities between the different gravitational-wave collaborations are considered to be at an adequate and sufficient level. The exact nature and combination of calibration methods to be used in 3G can be designed soon, but left flexible enough such that the best performing technologies can be installed in the instruments with only a few years lead time before operations. 
+Requirements on the absolute and relative calibration for third-generation detectors are not yet fully known, and dedicated modeling efforts are needed to understand the constraints set by various 3G scientific objectives. 3G detectors will likely require much better than sub-percent amplitude calibration, potentially necessitating R\&D to improve the capabilities of the current calibration apparatuses; such R\&D is already underway and cooperation activities between the different gravitational-wave collaborations are considered to be at an adequate and sufficient level.
+The exact nature and combination of calibration methods to be used in 3G can be designed soon, but left flexible enough such that the best performing technologies can be installed in the instruments with only a few years lead time before operations.
