@@ -5,8 +5,9 @@
 
 \vspace{-1cm}
 
-Interferometric gravitational-wave detectors are complex optical and mechanical systems. Their core instruments, Fabry-Perot and Michelson interferometers, can be used for high-precision measurements only if their parameters, especially their length and angular degrees of freedom, are careful controlled. 
-The complete detectors have a large number of control loops for the various optics, their suspension systems and many other components, such main and auxiliary lasers and active vibration-isolation systems. The \textbf{Simulations} section lists the requirements for modelling tools for design and commissioning of the complex opto-mechanical interferometers and the \textbf{Controls} section outlines the research required for developing adequate control schemes for future detectors.
+Interferometric gravitational-wave detectors are complex optical and mechanical systems. Their core instruments, Fabry-Perot and Michelson interferometers, can be used for high-precision measurements only if their parameters, especially their lengths and angular degrees of freedom, are careful controlled. 
+The complete detectors have a large number of control loops for the various optics, their suspension systems and many other components, such as main and auxiliary lasers and active vibration-isolation systems. 
+The \textbf{Simulations} section lists the requirements for modelling tools for design and commissioning of the complex opto-mechanical interferometers and the \textbf{Controls} section outlines the research required for developing adequate control schemes for future detectors.
 
 \begin{samepage} % this vodoo is needed to stop Latex from skipping half a page
 
@@ -14,8 +15,10 @@ The complete detectors have a large number of control loops for the various opti
 \subsection{Current approach to interferometer modelling}
 Gravitational-wave detectors require detailed modelling for design and performance studies; this also applies 
 % to some extent 
-to prototype experiments (table-top and 10\,m scale). The detector behaviour cannot be modelled with commercially available optical simulations as our requirements differ significantly from those of conventional systems. The proposed third-generation detectors include either new technologies or envisage pushing detector parameters closer to their limits. 
-A specific set of tools has emerged that can be used to achieve the required modeling for 3G detectors, though work remains to expand and enhance these tools. Here we classify the most commonly used software:
+to prototype experiments (table-top and 10\,m scale). 
+The detector behaviour cannot be modelled with commercially available optical simulations as our requirements differ significantly from those of conventional systems. 
+The proposed third-generation detectors include either new technologies or envisage pushing detector parameters closer to their limits. 
+A specific set of tools has emerged that can be used to achieve the required modeling for 3G detectors, though work remains to expand and enhance these tools. Here we classify the most commonly used softwares:
 
 \noindent{\textbf{Time-domain models}} describe the optical field and the optical components in the time domain, i.e. direct outputs will be signals over a discrete time step. Typically the time-domain models are the most powerful   simulations because they can include non-linear and dynamic behaviour.
 The disadvantage, however, is that such simulations require significant computing power. Example software: SIESTA~\cite{SIESTA}, E2E~\cite{e2e_2000}.
@@ -79,7 +82,7 @@ Interferometer simulation tasks for upgrades in current facilities and for 3G de
 support during the design and instrument development. The design of the advanced detectors triggered the development of new tools which then had a significant impact on the commissioning of the first generation. At the same time the interaction with commissioners (and scientists developing advanced detector
 technology at prototypes) provided essential community interaction and feedback that resulted in tools with better capabilities, validated test results and expert users. The same synergy is expected now between advanced detectors and 3G observatories; it should be encouraged and utilized as much as possible.
 
-\subsection{Recommendations and roadmap}
+\subsection{Outlook}
 Simulation tools are strongly defined through the context in which they are used. Many of the priorities for R\&D directly translate into a priority task for modelling work or a required effort in developing new capabilities for simulation tools. Also, modeling progress is not primarily limited by the development of technologies or methods, but by the available person power.
 % In particular the progress in modelling tools or modelling itself is not limited by development of technologies or methods, but by the available person power.
 
@@ -127,9 +130,10 @@ is recommended. Some codes, such as \textsc{Finesse} and GWINC are currently und
 
 \section{Controls}
 \label{sec:Controls}
-Control systems are a fundamental part of all interferometric gravitational wave detectors. The optical and interferometric methods used to achieve the strain and displacement sensitivity required for gravitational wave detection are all non-linear; actively nulling the signal with a feedback control system linearizes the output. The control system thus enables the low noise, stable, and linear operation of the detector in the presence of seismic, acoustic, and radiation pressure disturbances.
+Control systems are a fundamental part of all interferometric gravitational wave detectors. The optical and interferometric methods used to achieve the strain and displacement sensitivity required for gravitational wave detection are all non-linear; actively nulling the sensing signal with a feedback control system linearizes the output. 
+The control system thus enables the low noise, stable, and linear operation of the detector in the presence of seismic, acoustic, and radiation pressure disturbances.
 The detection of gravitational waves poses stringent requirements on the operations of the feedback and feed-forward control systems.
-In the past, meeting these requirements has proved extremely challenging.
+In the past, meeting these requirements has proved to be extremely challenging.
 This is partially because the detectors were designed without sufficient consideration of the controls challenges, and partially because the controls challenges are so extreme and gravitational wave detectors so unique in the field of controls.
 Some plans for future detectors aim to strongly improve the sensitivity at frequencies below 10\,Hz. This frequency region is currently dominated by excess noise associated with control systems, and the envisaged noise reduction represents a significant challenge for the control system design and implementation.
 
@@ -139,13 +143,16 @@ Gravitational wave detectors have many degrees of freedom,  including the differ
 In most cases, classical control methods are used to minimize some quantity, typically pole-zero based linear filters in feedback or feedforward systems.
 The filter design is based on modelled or measured response functions of the respective degree of freedom (composed by optical, mechanical and electronic parts). There is often a trade-off between robustness of the control loop and the overall sensitivity of the detector.
 There are also a few implementations of more modern techniques including:
-Global feed-forward of seismic noise to platforms and suspensions; $\mu$-Synthesis approach for limited angular control; Feed-forward sensor noise subtraction (removal of seismic noise from wave-front sensors); and parametric instability damping by phase-locked loops and damping through aliasing of high frequency signals.
+global feed-forward of seismic noise to platforms and suspensions; $\mu$-synthesis approach for limited angular control; feed-forward sensor noise subtraction (removal of seismic noise from wave-front sensors); and parametric instability damping by phase-locked loops and damping through aliasing of high frequency signals.
 
 \subsection{Requirements}
 %\begin{enumerate}
 %\item
-{\bf Low noise operation:} all control systems must be able to operate on the main and auxiliary degrees of freedom without introducing additional noise. This is a point often missed in design studies, where only ``fundamental'' noises are considered (thermal noise, quantum noise, etc.). However, different design choices of the interferometer translate to different requirements for the control system. As an example, second generation detectors are still limited at low frequencies by (mostly angular) control noise. This is directly related to the interplay between performance of the suspension and seismic isolation design and the trade-off between stability and low-noise in angular controls. If all suspension and seismic platform resonances could be moved to lower frequencies, and if the residual motion at the microseism could be reduced by the seismic isolation, then all angular control systems could be relaxed, improving the low frequency noise of the detectors. 
-With the 3G detectors aiming at considerably lower frequencies, this becomes a vital design aspect. Research is required to understand how best to integrate realistic controls limitations into interferometer designs.\par
+{\bf Low noise operation:} all control systems must be able to operate on the main and auxiliary degrees of freedom without introducing additional noise. 
+This is a point often missed in design studies, where only ``fundamental'' noises are considered (thermal noise, quantum noise, etc.). However, different design choices of the interferometer translate to different requirements for the control system. As an example, second generation detectors are still limited at low frequencies by (mostly angular) control noise. 
+This is directly related to the interplay between performance of the suspension and seismic isolation design and the trade-off between stability and low-noise in angular controls. 
+If all suspension and seismic platform resonances could be moved to lower frequencies, and if the residual motion due to microseism could be reduced by the seismic isolation, then all angular control systems could be relaxed, improving the low frequency noise of the detectors. 
+With the 3G detectors aiming at considerably lower frequencies, this becomes a vital design aspect. Research is required to understand how best to integrate realistic control limitations into interferometer designs.\par
 %\item
 \noindent{\bf Non-linear lock acquisition:} the term 'lock' refers to a stable state of the control systems in which all relevant degrees of freedom are stable at their nominal operating position. In the uncontrolled state the interferometer is a highly non-linear system, in the sense that all the optical signals that can be used to estimate the resonance conditions depend in a complex non-linear way on the relative mirror position. The lock acquisition scheme is an algorithm designed to bring the system in a deterministic way from the uncontrolled state to the final low noise state. There is significant room for improvement in this area, since all lock acquisition strategies developed so far are somehow sub-optimal. An example of a design choice that resulted from prototype research and vastly improved the lock acquisition process is the installation of the arm-length stabilization in Advanced LIGO~\cite{Mullavey:12}. The use of similar techniques and modern control theory could improve upon the current lock acquisition schemes
 % . Having a fast and reliable lock acquisition strategy can 
@@ -173,11 +180,14 @@ It is necessary to work on a wide range of issues and solutions, including: the 
 % that can be employed at LIGO 
 to reduce environmental couplings and sensor-noise, new control strategies to reduce the motion most critical to interferometer noise and operation, and improved seismic isolation and interferometer control to move the detection band below 10 Hz.
 
-\subsection{Impact on detector upgrades}
-Ongoing commissioning of current detectors includes the improvement and optimization of the control systems. We expect that many if not most new control techniques or ideas will be tested and implemented in 2G interferometers first. However, this is not true for schemes that require a very different sensing or actuation approach.
+% \subsection{Impact on detector upgrades}
+% The paragraph below was moved to the end of the subsection outlook.
+% Ongoing commissioning of current detectors includes the improvement and optimization of the control systems. We expect that many if not most new control techniques or ideas will be tested and implemented in 2G interferometers first. However, this is not true for schemes that require a very different sensing or actuation approach.
 
-\subsection{Recommendations and roadmap}
-Similarly to simulations, progress in the development of the required controls is not defined by future technical breakthroughs in the topic itself. Instead we can adapt techniques that have been developed in other areas, such as modern control techniques. Simulation tools can play a crucial role for designing control techniques and they should be further developed or extended for this purpose.
+\subsection{Outlook}
+%\subsection{Recommendations and roadmap}
+Similarly to simulations, progress in the development of the required controls is not defined by future technical breakthroughs in the topic itself. 
+Instead we can adapt techniques that have been developed in other areas, such as modern control techniques. Simulation tools can play a crucial role for designing control techniques and they should be further developed or extended for this purpose.
 More advanced techniques, such as adaptive control or machine learning, might need different and more powerful hardware to run, for example dedicated FPGAs or GPUs. 
 It is important to advance the control design compared to other subsystems, so that controls can inform the overall system design, 
 % which allows 
@@ -185,4 +195,8 @@ to avoid designs that make the control harder or impossible. Prototype interfero
 % for the experimental validation of 
 to validate control schemes when these incorporate a more fundamental change, whereas other techniques might be implemented and tested directly in current detectors.
 
-Control noise, or cross-coupling of fundamental noise through control channels, has historically limited gravitational-wave detectors, especially at the low-frequency end of the measurement band. The requirements of 3G detectors will pose a great challenge to control systems. Control schemes should be developed and tested early as an integral part of detector designs. Synergies with commissioning and detector upgrades should be sought out. At the same time, care should be taken that sufficient theoretical work and tests at prototype interferometers are performed for new control designs that cannot be tested with current detectors.
+Control noise, or cross-coupling of fundamental noise through control channels, has historically limited gravitational-wave detectors, especially at the low-frequency end of the measurement band. 
+The requirements of 3G detectors will pose a great challenge to control systems. Control schemes should be developed and tested early as an integral part of detector designs. Synergies with commissioning and detector upgrades should be sought out. 
+At the same time, care should be taken that sufficient theoretical work and tests at prototype interferometers are performed for new control designs that cannot be tested with current detectors.
+
+Ongoing commissioning of current detectors includes the improvement and optimization of the control systems. We expect that many if not most new control techniques or ideas will be tested and implemented in 2G interferometers first. However, this is not true for schemes that require a very different sensing or actuation approach.
