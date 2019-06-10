@@ -1,4 +1,4 @@
-\chapterimage{Figures/ArtisticView2.jpg} % Chapter heading image
+\chapterimage{Figures1_3/Introimage.png} % Chapter heading image
 %Einstein Telescope artits impression copyright Nikhef
 %\section{Introduction}
 \chapter{Introduction}
@@ -109,12 +109,9 @@ This was based on experience with past and current detectors, for which there wa
 Assuming a 2035 start date for initial 3G operations, preceded by five years of construction and five years of commissioning, it is likely that only technologies with mature R\&D in 2025 will feed into final design and engineering for the initial 3G detectors. In this document we assess the state of R\&D for 3G enabling technologies toward readiness in 2025, while also looking ahead to the R\&D that will continue as a necessary preparation for subsequent 3G upgrades. 
 % Prototyping such technology may include testing performance and science capability in an existing 2G facility. The term "Voyager" is used to describe a detector in a 2G facility that would prototype CE phase 2 technology whilst significantly improving detection range. 
 Section \ref{sec:Fac_Inf} addresses requirements and design aspects of the 3G infrastructure.
-In Sections \ref{sec:Core_optics} to \ref{sec:Newtonian_Noise} we consider the state of the art in enabling technologies, the R\&D needed in each area, the level of resources needed (broadly bracketed as high, medium, low),
-% \magentacomment{This is not implemented in the report} 
-and how the R\&D should be focused in order to deliver fully tested subsystems for timely installation in new 3G facilities. 
+In Sections \ref{sec:Core_optics} to \ref{sec:Newtonian_Noise} we consider the state of the art in enabling technologies, the R\&D needed in each area, the level of resources needed (broadly bracketed as high, medium, low), and how the R\&D should be focused in order to deliver fully tested subsystems for timely installation in new 3G facilities. 
 The analysis suggests prototyping 3G technology including new test facilities and use of existing long baseline facilities. 
 Sections~\ref{sec:Core_optics} and \ref{sec:Coatings} describe the closely related subjects of core optics and coatings, while Section~\ref{sec:Cryogenics} describes cryogenics, and Section~\ref{sec:Suspensions_Isolation} covers suspensions and seismic isolation systems.
-%while Sections~\ref{sec:Cryogenics} and \ref{sec:Suspensions_Isolation} describe suspensions and isolation systems. 
 A common theme among these chapters is thermal noise, described in Box~\ref{Box:Thermal}, which is the primary consideration for many choices in optics, coatings, suspensions, and operating temperature. 
 Chapter~\ref{sec:Newtonian_Noise} describes Newtonian noise and its connection with facility choices and reliance on modeling and subtraction schemes. 
 In addition to the fundamental noises described above, a myriad of technical noise sources and control issues can limit interferometer performance: parametric instabilities, scattered light, and noise originating from auxiliary optics and control systems. 
@@ -164,9 +161,9 @@ Length [m] &&&&&&&\\
 \begin{Infobox}{\bf Thermal Noise in Gravitational Wave Detectors}
 %\label{Box:Thermal}
 %\paragraph{Infobox Thermal Noise in gravitational wave detectors}
-Thermal noise is one of the fundamental noise sources limiting 2G detectors over a considerable frequency range. The main contributions come from Brownian noise of the mirror suspensions, substrates and coatings and thermo-optic (thermo-elastic plus thermo-refractive) noise of substrates and coatings. The relation between the dissipation and the power spectrum of the noise is described by Callen's Fluctuation-Dissipation Theorem~\cite{CaWe1951, Kubo:FDT, Callen:1959} and is given by:
+Thermal noise is one of the fundamental noise sources limiting 2G detectors over a considerable frequency range. The main contributions come from Brownian noise of the mirror suspensions, substrates and coatings and thermo-optic (thermo-elastic plus thermo-refractive) noise of substrates and coatings. The relation between the dissipation and the power spectrum (single sided) of the noise is described by Callen's Fluctuation-Dissipation Theorem~\cite{CaWe1951, Kubo:FDT, Callen:1959} and is given by:
 \begin{equation}
-S_x(\omega) = \frac{k_B T}{\omega^2} \left| \mathrm{Re} \big[ Y(\omega) \big]\right| .
+S_x(\omega) = \frac{4\,k_B T}{\omega^2} \left| \mathrm{Re} \big[ Y(\omega) \big]\right| .
 \end{equation}
 \label{eq:FDT}
 Here, $k_b$ denotes the Boltzmann constant, $\omega$ the angular frequency, T the temperature and Y the mechanical admittance, defined as
