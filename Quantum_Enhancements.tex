@@ -6,12 +6,11 @@
 \label{sec:Quantum}
 
 %\section{Introduction} 
+\vspace{1 cm}
 Quantum noise, originating from the quantized nature of light, limits the performance of laser-interferometric gravitational wave detectors over a large part of the observational spectrum. In contrast to many other fundamental noise sources, quantum noise can be strongly influenced and shaped by the interferometer configuration, e.g., the type of interferometer, number of optical components and their masses, mirror reflectivities and optical losses, and the use of additional optical cavities. Advanced interferometer topologies for quantum noise reduction beyond the current state of the art have been proposed~\cite{Danilishin:2019dxq}. Such configurations have the potential to significantly improve the quantum noise in a specific frequency region of interest (e.g. at the low-frequency end for more accurate source parameter extraction or the potential of early warning for signals with an expected counterpart; at the high frequency end for improved neutron star physics) or even to provide a broadband improvement across the full observational spectrum. 
-
 With quantum noise reduction schemes developing rapidly, building additional flexibility and space into the 3G infrastructure is advised to allow for enhancements and upgrades to the initial 3G detectors as technology becomes available. 
 %Taking full advantage of the best quantum noise reduction schemes available for 3G will require additional flexibility and space to be built into the planned infrastructure that allow for enhancements and upgrades to the initial 3G detectors. 
 Broadly speaking, all advanced quantum noise reduction schemes rely on either the addition of long (up to km-scale) optical cavities (with potentially strongly reduced length noise requirements compared to the main interferometer), and/or major modifications to the optical configuration of the output port, i.e., the optical path between the main interferometer and main photodetectors used for reconstruction of the gravitational-wave signal. 
-
 % Quantum noise reduction results from changes to the whole interferometer, that intrinsically links most subsystems of the observatory. 
 The implementation and use of quantum noise reduction techniques can depend on and affect many susbsytems of the interferometer. The associated research and development therefore requires considerable effort, initially with detailed modelling, followed by extensive experimental testing of complete interferometer configurations in suitable environments, covering the entire range from small-scale tabletop experiments to low-noise prototype interferometers. A worldwide coordination of the required R\&D activities will allow an efficient execution of the required research programs and will also support the procurement of the required R\&D funds. 
  
@@ -27,32 +26,48 @@ Radiation-pressure noise can be addressed by increasing the interferometer test 
 Quantum noise beyond the SQL already plays an important role in the Advanced detectors~\cite{BuCh2001}. GEO600~\cite{GEO:Squeezing}, Advanced LIGO~\cite{H1:Squeezing,AdvancedLIGO2015} and Advanced Virgo~\cite{AdvancedVirgo2015} are currently demonstrating and improving squeezed light injection, obtaining shot noise reduction of up to 6\,dB. A+ and Advanced Virgo+ will test frequency dependent squeezing with short (300\,m) filter cavities~\cite{Eva2013,TAMA_FDS2016}, targeting 6\,dB effective squeezing over the whole detection band. Further, balanced homodyne readout~\cite{BHD,Stefszky:Balanced2012} will be part of A+. The lessons learned through these implementations will greatly benefit 3G quantum noise designs.
 
 \section{Requirements for 3G}
-Dual-recycled Fabry-Perot Michelson interferometers combined with squeezed light injection are the state-of-the-art for current gravitational-wave detectors and serve as a robust, low-risk baseline design for 3G observatories. More advanced interferometer schemes
+Dual-recycled Fabry-Perot Michelson interferometers combined with squeezed light injection are the state-of-the-art for current gravitational-wave detectors and serve as a robust, low-risk baseline design for 3G observatories. More innovative interferometer schemes e.g. speedmeters or variational readout schemes.
 % , less researched so far, 
-may offer potentially higher quantum noise suppression factors, but they require further R\&D to be fully developed. 
-
-The following list details some key requirements for 3G detectors:
+may offer potentially higher quantum noise suppression factors (in particular at the very low frequency end of the detection band, i.e. below 10\,Hz),  but they require further R\&D 
+ in order to first evaluate their principal suitability for application in 3G observatories and then to fully qualify and develop them. 
+The following list details the top level  key requirements in terms of quantum noise reduction schemes   for 3G detectors:
 
 \begin{itemize}
-\item High circulating light power is an essential ingredient in many quantum noise reduction schemes, for example to reduce shot noise, or to make use of correlation effects in opto-mechanical systems. Low-loss and stable operation of interferometers at high power is a key requirement for these schemes.
-\item Stable and well controllable squeezed light sources (with the laser wavelengths used by 3G detectors), usually combined with long (100s of meters to km-scale) filter cavities, implemented to give a quantum noise reduction of more than 10dB.
-\item Efficient implementation of QND schemes and squeezed-light technology relies on a couple of key technologies. These include the development of low-loss optical components such as Faraday isolators, and reduction of optical scattering due to improved mirror surface figure errors. Another important contribution to the total optical loss is the matching of light fields to different optical resonators in the system. Leveraging adaptive optics for 3G detectors will contribute to a partial solution of this mode-matching problem. 
-\item High-quantum-efficiency photodiodes (>98\%) at the operating light source wavelengths.
-\item Heavy test masses, possibly up to 500\,kg, to suppress the effect of radiation pressure noise.
-\item Adequate low-noise control systems for the main interferometer as well as auxiliary systems like filter cavities and readout system, compatible with astrophysical sensitivity in the sub-10Hz band.   
+\item High circulating light power is an essential ingredient in many quantum noise reduction schemes, for example to reduce shot noise, or to make use of correlation effects in opto-mechanical systems. Low-loss and stable operation of interferometers at the several megawatt level   is a key requirement for 3G detectors,  which drives requirements for related subsystems, e.g.  for low absorption coatings, suitable cooling systems for cryogenic interferometers, sufficient thermal compensation schemes and mitigation of parametric instabilities.  .
+\item  Long-term  stable,  low-maintenance  and well controllable squeezed light sources (with the laser wavelengths used by 3G detectors, e.g. 1064\,nm, 1550\,nm and $\approx$2000\,nm), usually combined with long (hundreds  of meters to km-scale) filter cavities, implemented to give a quantum noise reduction of  at least  10\,dB  across the full observation band .
+\item Efficient implementation of QND schemes and squeezed-light technology relies on  low optical losses. For instance in order to obtain 6\,dB of observed squeezing the maximum loss on the full optical train from the creation of the squeezing up to the detection on the main photodiodes has to be below about 22\,\%. In order to increase the observed squeezing to the envisaged 3G levels of 10+\,dB of squeezing the total losses have to be reduced to below 8\,\% \cite{LSC_IS_WP}. Hence there are very stringent requirements to develop  low-loss optical components such as Faraday isolators (with less than 1\,\% of optical loss) , reduction of optical scattering due to improved mirror surface figure errors, and adaptive optics for 3G detectors  which allow to reduce modematching losses to below 0.3\,\% . 
+\item High-quantum-efficiency photodiodes (>99\%) at the operating light source wavelengths (e.g. 1064\,nm, 1550\,nm and $\approx$2000\,nm).
+\item Heavy test masses of about 200\,kg,  possibly up to 500\,kg in the case of CE,  to suppress the effect of radiation pressure noise technical control noise and also to accommodate the large laser beams originating from the long baseline of the planned 3G detectors.
+\item Adequate low-noise control systems for the main interferometer as well as auxiliary systems like filter cavities and readout system, compatible with astrophysical sensitivity in the sub-10Hz band.
+For instance phase noise in the filter cavity control reduces the observable squeezing. For 3G detectors a phase noise level of smaller than 10\,mrads is required \cite{LSC_IS_WP}.
 \item There are theoretical approaches to circumventing the SQL to any desired degree, but the limit to performance will always be set by the achievable optical losses in the system. Future R\&D will be able to quantify how the loss distribution and different optical layouts set this limit.
 \end{itemize}
 
-\section{Benefits for 2G} 
-Both 2G and 3G detectors are based on long baseline L- or triangle-shaped interferometers with additional cavities.
-% The fundamental shape of 3G and 2G detectors will be based on long baseline L-shaped interferometers with additional cavities. 
-It is expected that some quantum noise reduction schemes developed for 3G can be installed in current facilities and should be considered for further upgrades to 2G observatories. This will mitigate some risks associated with 3G. However, only 3G facilities will be able to fully support the potential of advanced quantum noise reduction schemes, and quantum noise R\&D for 3G is not a subset of ongoing efforts but demands a new dedicated approach, requiring funding and person power. Challenging R\&D for 3G observatories has the potential to attract additional early career scientists who will be able to also support the needs of the detectors today. 
+%\section{Benefits for 2G} 
+%Both 2G and 3G detectors are based on long baseline L- or triangle-shaped interferometers with additional cavities.
+%% The fundamental shape of 3G and 2G detectors will be based on long baseline L-shaped interferometers with additional cavities. 
+%It is expected that some quantum noise reduction schemes developed for 3G can be installed in current facilities and should be considered for further upgrades to 2G observatories. This will mitigate some risks associated with 3G. However, only 3G facilities will be able to fully support the potential of advanced quantum noise reduction schemes, and quantum noise R\&D for 3G is not a subset of ongoing efforts but demands a new dedicated approach, requiring funding and person power. Challenging R\&D for 3G observatories has the potential to attract additional early career scientists who will be able to also support the needs of the detectors today. 
 % (as set out by collaboration agreements).
 
-\section{Outlook}
+\section{Outlook and recommendations}
 %\section{Recommendations and timeline}
-A significant R\&D effort is required to make an informed selection of the optimal quantum noise reduction strategies for 3G detectors and to enable their risk free application to maximise the science return of 3G observatories. Additionally, we recommend the development of unified classification scheme of QND techniques and a common approach to analysing and comparing their performances. The quantum noise reduction techniques used for 3G detectors must reach maturity and be demonstrated by prototypes several years before 3G instrument installation.  
+A significant R\&D effort is required to make an informed selection of the optimal quantum noise reduction strategies for 3G detectors and to enable their risk free application to maximise the science return of 3G 
+ observatories. 
 
+
+The R\&D roadmap in terms of quantum noise improvements for 3G detectors can be divided into 2 broad strands: 1) R\&D to realise the observation of frequency dependent squeezing at the 10+\,dB level. 2) R\&D to evaluate and ultimately qualify more innovative, but so far less developed, QND schemes, which have the potential to further improve the sensitivity of 3G detectors at the low frequency end.  
+We recommend the following actions:
+\begin{itemize}
+    \item Parallel development of low loss optical components (e.g. Faraday isolators with loss of less than 1\,\%) and loss reduction techniques (e.g. for all wavelength currently under consideration for 3G detectors (e.g. 1064\,nm, 1550\,nm and $\approx$2000\,nm) 
+    \item Parallel development of high-quantum efficiency photodiodes for 1550\,nm and $\approx$2000\,nm. A global coordination of the communication with photodiode manufacturers will increase the chances of success. 
+    \item Development of unified classification scheme of QND techniques and a common approach to analysing and comparing their performances
+    \item R\&D programme of table top proof of principle experiments, followed by demonstration in 10\,m class prototype facilities in order to qualify any promising QND schemes going beyond the Dual-Recycled Fabry-Perot Michelson with frequency dependent squeezing.  The quantum noise reduction techniques used for 3G detectors must reach maturity and be demonstrated by prototypes several years before 3G instrument installation.
+\end{itemize}
+ 
+ 
+
+%\greencomment{Stan:  I would like to see the Outlook section changed to Recommendations and to include more specific recommendations--the one on a uniform classification scheme and a common way to compare different schemes is a good example of such a rather specific rec.
+%}
 %\subsection{Quantum Noise Reduction Techniques under consideration}
 %Quick overview of the most prominent quantum noise reduction techniques currently pursued. Maybe this could be done in a separate explanation box rather 
 %than in the main text of the document?
