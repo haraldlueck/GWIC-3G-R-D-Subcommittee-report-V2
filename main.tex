@@ -2,6 +2,7 @@
 
 %\input{structure_only_RaD_part_old.tex}
 \input{structure.tex}
+\input{Acrodef.tex}
 \begin{document}
 \newcounter{boxcount}
 \setcounter{boxcount}{1}
@@ -11,7 +12,7 @@
 \pagenumbering{roman}
 \input{Cover_TOC.tex}
 \newpage
-\input{ExecSummary.tex}
+%\input{ExecSummary}
 \input{Introduction.tex}
 \input{Facilities_and_Infrastructures.tex}
 \input{Core_Optics.tex}
@@ -24,7 +25,7 @@
 \input{Aux_Optics.tex}
 \input{Sim_and_Control}
 \input{calibration.tex}
-\input{Summary.tex}
+\input{Outlook.tex}
 %\addcontentsline{toc}{section}{Appendix}
 \appendix
  \titleformat{\chapter}[display]
@@ -45,8 +46,10 @@
 %\pagenumbering{arabic}% resets `page` counter to 1
 %\renewcommand*{\thepage}{D\arabic{page}}
 %\input{Appendix_Sim_and_Control.tex}
-%\pagenumbering{roman}% resets `page` counter to 1
-\renewcommand*{\thepage}{\roman{page}}
+\clearpage
+\pagenumbering{arabic}% resets `page` counter to 1
+\renewcommand*{\thepage}{AC\arabic{page}}
+\input{acronyms}
 \bibliographystyle{unsrtshort}
 %\bibliographystyle{utphys}
 \bibliography{GWrefs}

@@ -18,36 +18,36 @@ Gravitational-wave detectors require detailed modelling for design and performan
 to prototype experiments (table-top and 10\,m scale). 
 The detector behaviour cannot be modelled with commercially available optical simulations as our requirements differ significantly from those of conventional systems. 
 The proposed third-generation detectors include either new technologies or envisage pushing detector parameters closer to their limits. 
-A specific set of tools has emerged that can be used to achieve the required modeling for 3G detectors, though work remains to expand and enhance these tools. Here we classify the most commonly used software:
+A specific set of tools has emerged that can be used to achieve the required modeling for \ac{3G}  detectors, though work remains to expand and enhance these tools. Here we classify the most commonly used software:
 
 \noindent{\textbf{Time-domain models}} describe the optical field and the optical components in the time domain, i.e. direct outputs will be signals over a discrete time step. Typically the time-domain models are the most powerful   simulations because they can include non-linear and dynamic behaviour.
 The disadvantage, however, is that such simulations require significant computing power. Example software: SIESTA~\cite{SIESTA}, E2E~\cite{e2e_2000}.
 
 
 \noindent{\textbf{Frequency-domain models}} are based on the approximation that the entire system is in a steady-state with only small disturbances or slow (quasi-static) changes. All the modelled features are linearised, thus the system can be described as a set of linear equations. 
-This approach provides very fast and flexible models but obviously lacks the ability to model non-linear physical features. Frequency domain software can be further split into two categories: \emph{FFT propagation models} and \emph{modal models}.
+This approach provides very fast and flexible models but obviously lacks the ability to model non-linear physical features. Frequency domain software can be further split into two categories: \emph{\ac{FFT} propagation models} and \emph{modal models}.
 
 \end{samepage} % this vodoo is needed to stop Latex from skipping half a page
 
 \begin{itemize}
-\item{\textbf{FFT propagation models}} have been developed to analyse the behaviour of optical fields in the presence of wavefront distortions by discretizing the transverse complex amplitude of the field on a 2D grid.
+\item{\textbf{\ac{FFT}   propagation models}} have been developed to analyse the behaviour of optical fields in the presence of wavefront distortions by discretizing the transverse complex amplitude of the field on a 2D grid.
 %The name of this method is derived from the fact that this field can be propagated efficiently using a single two-dimensional discrete Fast Fourier Transform. 
-Example software: SIS~\cite{SIS}, OSCAR~\cite{OSCAR}, DarkF~\cite{DarkF, Vinet92}.
+Example software: SIS~\cite{SIS}, \acs{OSCAR}~\cite{OSCAR}, \acs{DarkF}~\cite{DarkF, Vinet92}.
  
 \item{\textbf{Modal models}} use Gaussian modes to describe the spatial properties of the beam, its propagation and scattering. The modal model expands the beam shape into orthogonal modes ordered by spatial frequency forming a complete basis. Thus for near perfect Gaussian beams only a few numerical values describing the mode amplitudes need to be computed resulting in faster simulations. The commissioning of advanced detectors, as well as the design of further upgrades have shown that such tools have become crucial to understand interferometer limitations. 
 %Modelling tasks related to alignment sensing and control, parametric instabilities, or simply the effect of mode mismatch or beam clipping on the control systems and ultimately on the gravitational wave signal have taken center stage. 
-Example software: Optickle~\cite{Optickle}, \textsc{Finesse}~\cite{Finesse, Freise04}, MIST~\cite{MIST}.
+Example software: \acs{Optickle}~\cite{Optickle}, \textsc{\acs{Finesse}}~\cite{Finesse, Freise04}, \acs{MIST}~\cite{MIST}.
 \end{itemize}
 \noindent{\textbf{Interferometer noise calculators}} are configuration level simulations that operate at a higher level so that a given optical configuration is symbolically computed and parameterized. 
 %While inappropriate for detailed simulation of the optical plant, 
-This approach is very effective for an initial exploration of a parameter space for a variety of optical configurations and for providing simple reference noise budgets. Example software: GWINC~\cite{GWINC}.
+This approach is very effective for an initial exploration of a parameter space for a variety of optical configurations and for providing simple reference noise budgets. Example software: \ac{GWINC}  ~\cite{GWINC}.
 
-\noindent{\textbf{SimPlant}}~\cite{simplant}, is a virtual interferometer for commissioning in which the user can click a button to turn the machine over to Sim Mode, and then use the usual tools to measure, for example, the noise and transfer functions. This provides the fastest way to compare our theoretical knowledge with the real instrument.
+\noindent{\textbf{\acs{SimPlant}}}~\cite{simplant}, is a virtual interferometer for commissioning in which the user can click a button to turn the machine over to Sim Mode, and then use the usual tools to measure, for example, the noise and transfer functions. This provides the fastest way to compare our theoretical knowledge with the real instrument.
 %and see where the differences are. 
 The simulated interferometer runs in real time within the real time control system so that the usual controls system can be run. 
 % Whether the interferometer being controlled is real or virtual is transparent to the control room operator.
 
-\noindent{\textbf{Ray tracing}} tools are used to find the exact position of beam axes and Gaussian beam parameters in real systems and can help with stray light investigations, often using computer-aided-design (CAD) data from the design of the instrument's mechanical components as a basis. Example software: IfoCAD~\cite{IfoCAD, kochkina}, OptoCAD~\cite{OptoCAD}.
+\noindent{\textbf{Ray tracing}} tools are used to find the exact position of beam axes and Gaussian beam parameters in real systems and can help with stray light investigations, often using \ac{CAD} data from the design of the instrument's mechanical components as a basis. Example software: \acs{IfoCAD}~\cite{IfoCAD, kochkina}, \acs{OptoCAD}~\cite{OptoCAD}.
 %For scattered light analysis, it is critical to use non-sequential ray tracing and Monte-Carlo methods in order to accurately represent the large dynamic range of field amplitudes necessary to compute the phase and amplitude noise.
 
 %%% -------------------------------------------------------------------------
@@ -68,7 +68,7 @@ Modelling of squeezed light in higher-order modes, improved thermal compensation
 \item Scattered light control, modelling of backscatter of detection optics and interferometer scatter. Include injection of noise with specific coherence into interferometer modelling tools. Non-sequential ray-tracing. Monte-Carlo methods.
 \item Control design: better models of control schemes can be achieved by developing more effective tools for the analysis of in-loop cross coupling of a mixed mechanical, optical and electronic system, and for the analysis of modern
 control strategies.
-\item Advanced quantum noise schemes, development of a robust 'fundamental' quantum limit. Modelling of quantum correlations through complex MIMO (multiple in, multiple out) systems.
+\item Advanced quantum noise schemes, development of a robust 'fundamental' quantum limit. Modelling of quantum correlations through complex \ac{MIMO}  systems.
 %\item Modelling of non-linear optical elements, such as crystals (squeezing), active opto-mechanical elements (unstable filters) etc.  Development and implementation of realistic linearised couplings for these elements into optical models.
 \item Study of optical configurations which rely strongly on polarisation schemes, requires the addition of light polarisation to interferometer models.
 \item Newtonian gravity noise reduction, advanced modelling of local sensing and global control strategies, require an advanced implementation of mechanical systems and seismic and gravitational noise coupling in interferometer models as well as the simulation of gravitational noise based on ground noise measurements.
@@ -78,9 +78,9 @@ control strategies.
 
 %%% -------------------------------------------------------------------------
 \subsection{Impact on Detector Upgrades}
-Interferometer simulation tasks for upgrades in current facilities and for 3G detectors are closely related and strongly benefit from each other. Simulation tools and interferometer modelling have to be advanced ahead of time in order to be able to provide the essential
+Interferometer simulation tasks for upgrades in current facilities and for \ac{3G}  detectors are closely related and strongly benefit from each other. Simulation tools and interferometer modelling have to be advanced ahead of time in order to be able to provide the essential
 support during the design and instrument development. The design of the advanced detectors triggered the development of new tools which then had a significant impact on the commissioning of the first generation. At the same time the interaction with commissioners (and scientists developing advanced detector
-technology at prototypes) provided essential community interaction and feedback that resulted in tools with better capabilities, validated test results and expert users. The same synergy is expected now between advanced detectors and 3G observatories; it should be encouraged and utilized as much as possible.
+technology at prototypes) provided essential community interaction and feedback that resulted in tools with better capabilities, validated test results and expert users. The same synergy is expected now between advanced detectors and \ac{3G}  observatories; it should be encouraged and utilized as much as possible.
 
 \section{Outlook and Recommendations}
 Simulation tools are strongly defined through the context in which they are used. Many of the priorities for R\&D directly translate into a priority task for modelling work or a required effort in developing new capabilities for simulation tools. Also, modeling progress is not primarily limited by the development of technologies or methods, but by the available person power.
@@ -91,10 +91,10 @@ Simulation tools are strongly defined through the context in which they are used
 To address the above challenges, the current portfolio of software tools must be updated, either by extending the existing software or by providing new dedicated tools. The detailed list of code changes or required features goes beyond the scope of this document. The following are recommendations for the higher-level actions to support an effective and open environment for this effort.
 
 \noindent{\textbf{Additional software}}
-Most of the required modelling tasks can be performed by extending and updating the available tools, some of which is already well underway. However some missing functionality might be better achieved by developing new software. Needed packages include an easy to use and flexible time-domain simulation, a 3D beam tracing software dedicated to ground based detectors and a comprehensive modelling software for various suspension systems capable of computing the thermal noise of all elements. In addition, commercial tools should be reviewed to understand when these are superior to custom made tools, for example, for more common optics tasks such as modelling stray light.
+Most of the required modelling tasks can be performed by extending and updating the available tools, some of which is already well underway. However some missing functionality might be better achieved by developing new software. Needed packages include an easy to use and flexible time-domain simulation, a \acs{3D} beam tracing software dedicated to ground based detectors and a comprehensive modelling software for various suspension systems capable of computing the thermal noise of all elements. In addition, commercial tools should be reviewed to understand when these are superior to custom made tools, for example, for more common optics tasks such as modelling stray light.
 
 \noindent{\textbf{Resources}}
-We encourage collaborating institutions to increase efforts in the development and use of simulation tools over the next 5 years, a crucial time for the design of 3G instruments and for upgrades to current detectors.
+We encourage collaborating institutions to increase efforts in the development and use of simulation tools over the next 5 years, a crucial time for the design of \ac{3G}  instruments and for upgrades to current detectors.
 %, while the commissioning of detectors will push the limits of current technology. 
 Experience has shown that individual post-docs and PhD students can provide effective tools that are quickly adopted and used by a wide community. However, those tools often come only with rudimentary or outdated documentation and code reviews or formal testing 
 % of simulation results 
@@ -121,17 +121,17 @@ Accessibility of the software, and ideally the source code, should be improved. 
 
 The effectiveness of specific tools is often not defined by the a single feature but by a network effect based on many factors. Any tool benefits greatly from a large user base, for example, through receiving bug reports and the availability and diversity of examples as well as experts on how to use the specific tool. And the impact of a modelling tool is improved significantly by a strong track record and trust by the wider community. We recommend that software maintainers adopt the aim of making the software as accessible as possible without compromising its core functionality. %Similarly we recommend that groups distributing software make an effort in providing training material or training opportunities for new users. The quality and effectiveness of simulation tools can be greatly enhanced by a large and informed active user base.
 
-Those software tools that aim at providing standard results for the wider community must also provide the official data sets or model files, such as, e.g., the default LIGO models for \textsc{Finesse}. The GWINC software package should provide standard noise budgets for all envisaged detectors and the
+Those software tools that aim at providing standard results for the wider community must also provide the official data sets or model files, such as, e.g., the default \ac{LIGO}  models for \textsc{Finesse}. The \ac{GWINC}  software package should provide standard noise budgets for all envisaged detectors and the
 international community should establish a mechanism to review these models.
 
 \noindent{\textbf{Source code maintenance}}
 Some important simulation tools date back to their original development in the 80s and 90s. Given the rapid development of computing and computer languages, it could be beneficial to re-implement these in modern frameworks. At the same time the experience and knowledge acquired with the originals should not be lost in the process. A careful development process and code design that finds a balance between modern technology and backwards compatibility
-is recommended. Some codes, such as \textsc{Finesse} and GWINC are currently undergoing such a process. Other software should be reviewed for similar updates.
+is recommended. Some codes, such as \textsc{Finesse} and \ac{GWINC}  are currently undergoing such a process. Other software should be reviewed for similar updates.
 
 In summary we recommend
 \begin{itemize}
 \item that the current portfolio of software tools must be updated, either by extending the existing software or by providing new dedicated tools.  
-\item  that collaborating institutions increase efforts in the development and use of simulation tools over the next 5 years, a crucial time for the design of 3G instruments and for upgrades to current detectors.
+\item  that collaborating institutions increase efforts in the development and use of simulation tools over the next 5 years, a crucial time for the design of \ac{3G}  instruments and for upgrades to current detectors.
 \item continuation (or establishment) of working groups within projects dedicated to interferometer modelling and the organization of workshops adjacent to international meetings. Code developers in projects will benefit from discussion fora. Detector modelers can better share experiences, e.g. noise behavior
 \item  improved accessibility of the software, and ideally the source code;  software maintainers adopt the aim of making the software as accessible as possible without compromising its core functionality. 
 
@@ -148,7 +148,7 @@ Some plans for future detectors aim to strongly improve the sensitivity at frequ
 
 \subsection{Current Approach}
 % Considering only the core optical interferometer, 
-Gravitational wave detectors have many degrees of freedom,  including the differential arm motion (DARM), which is sensitive to gravitational waves, and many auxiliary degrees of freedom, which are not. DARM must be stabilized to linearize the signal, and the many auxiliary degrees must be well stabilized to avoid coupling noise into the gravitational wave readout. Achieving this second requirement is the primary challenge, due to the large number of coupled degrees of freedom, where the couplings may be both non-linear and non-stationary, and the variety of timescales involved (which range from seconds to hours).
+Gravitational wave detectors have many degrees of freedom,  including the  \ac{DARM}, which is sensitive to gravitational waves, and many auxiliary degrees of freedom, which are not. \ac{DARM} must be stabilized to linearize the signal, and the many auxiliary degrees must be well stabilized to avoid coupling noise into the gravitational wave readout. Achieving this second requirement is the primary challenge, due to the large number of coupled degrees of freedom, where the couplings may be both non-linear and non-stationary, and the variety of timescales involved (which range from seconds to hours).
 In most cases, classical control methods are used to minimize some quantity, typically pole-zero based linear filters in feedback or feedforward systems.
 The filter design is based on modelled or measured response functions of the respective degree of freedom (composed by optical, mechanical and electronic parts). There is often a trade-off between robustness of the control loop and the overall sensitivity of the detector.
 There are also a few implementations of more modern techniques including:
@@ -161,7 +161,7 @@ global feed-forward of seismic noise to platforms and suspensions; $\mu$-synthes
 This is a point often missed in design studies, where only ``fundamental'' noises are considered (thermal noise, quantum noise, etc.). However, different design choices of the interferometer translate to different requirements for the control system. As an example, second generation detectors are still limited at low frequencies by (mostly angular) control noise. 
 This is directly related to the interplay between performance of the suspension and seismic isolation design and the trade-off between stability and low-noise in angular controls. 
 If all suspension and seismic platform resonances could be moved to lower frequencies, and if the residual motion due to microseism could be reduced by the seismic isolation, then all angular control systems could be relaxed, improving the low frequency noise of the detectors. 
-With the 3G detectors aiming at considerably lower frequencies, this becomes a vital design aspect. Research is required to understand how best to integrate realistic control limitations into interferometer designs.\par
+With the \ac{3G}  detectors aiming at considerably lower frequencies, this becomes a vital design aspect. Research is required to understand how best to integrate realistic control limitations into interferometer designs.\par
 %\item
 \noindent{\bf Non-linear lock acquisition:} the term 'lock' refers to a stable state of the control systems in which all relevant degrees of freedom are stable at their nominal operating position. In the uncontrolled state the interferometer is a highly non-linear system, in the sense that all the optical signals that can be used to estimate the resonance conditions depend in a complex non-linear way on the relative mirror position. The lock acquisition scheme is an algorithm designed to bring the system in a deterministic way from the uncontrolled state to the final low noise state. There is significant room for improvement in this area, since all lock acquisition strategies developed so far are somehow sub-optimal. An example of a design choice that resulted from prototype research and vastly improved the lock acquisition process is the installation of the arm-length stabilization in Advanced LIGO~\cite{Mullavey:12}. The use of similar techniques and modern control theory could improve upon the current lock acquisition schemes
 % . Having a fast and reliable lock acquisition strategy can 
@@ -181,7 +181,7 @@ detector is controlled in a non-optimal way, coupled with sophisticated simulati
 High circulating light power introduces a number of challenges related to control systems, such as instabilities of the optical cavities due to increased opto-mechanical coupling, and thermal distortions of the laser beam. Auxiliary control systems have been and are being developed to mitigate these effects post-hoc in the first and second generation detectors. These should be fully integrated into the global control strategy.
 \par
 \noindent{\bf Low frequency control:}
-At low frequencies (below $\approx$30Hz), the gravitational-wave output is dominated by `technical' noise sources. While the coupling mechanisms are non-linear and complex, the underlying origin is clear: excess motion between 0.1 and 5Hz. This motion must be reduced through active control to an RMS level that is different for each subsystem, but which is determined by the interferometer's peak operating point and the linearity around that point.
+At low frequencies (below $\approx$30Hz), the gravitational-wave output is dominated by `technical' noise sources. While the coupling mechanisms are non-linear and complex, the underlying origin is clear: excess motion between 0.1 and 5Hz. This motion must be reduced through active control to an \ac{RMS} level that is different for each subsystem, but which is determined by the interferometer's peak operating point and the linearity around that point.
 Future interferometers will need to consider the design of low frequency sensors and control systems fundamentally. It is no longer sufficient to say that low-frequency noise is a `controls problem', it must instead be solved through clear and traceable requirements for all relevant systems. 
 % of DARM and detector operation. 
 % These will in turn drive the requirements for technical sub-systems such as suspension-damping sensors. 
@@ -191,7 +191,7 @@ to reduce environmental couplings and sensor-noise, new control strategies to re
 
 % \subsection{Impact on detector upgrades}
 % The paragraph below was moved to the end of the subsection outlook.
-% Ongoing commissioning of current detectors includes the improvement and optimization of the control systems. We expect that many if not most new control techniques or ideas will be tested and implemented in 2G interferometers first. However, this is not true for schemes that require a very different sensing or actuation approach.
+% Ongoing commissioning of current detectors includes the improvement and optimization of the control systems. We expect that many if not most new control techniques or ideas will be tested and implemented in \ac{2G}  interferometers first. However, this is not true for schemes that require a very different sensing or actuation approach.
 
 \section{Outlook and Recommendations}
 %\subsection{Recommendations and roadmap}
@@ -205,19 +205,19 @@ to reduce environmental couplings and sensor-noise, new control strategies to re
 %to validate control schemes when these incorporate a more fundamental change, whereas other techniques might be implemented and tested directly in current detectors.
 
 %Control noise, or cross-coupling of fundamental noise through control channels, has historically limited gravitational-wave detectors, especially at the low-frequency end of the measurement band. 
-%The requirements of 3G detectors will pose a great challenge to control systems. Control schemes should be developed and tested early as an integral part of detector designs. Synergies with commissioning and detector upgrades should be sought out. 
+%The requirements of \ac{3G}  detectors will pose a great challenge to control systems. Control schemes should be developed and tested early as an integral part of detector designs. Synergies with commissioning and detector upgrades should be sought out. 
 %At the same time, care should be taken that sufficient theoretical work and tests at prototype interferometers are performed for new control designs that cannot be tested with current detectors.
 
-%Ongoing commissioning of current detectors includes the improvement and optimization of the control systems. We expect that many if not most new control techniques or ideas will be tested and implemented in 2G interferometers first. However, this is not true for schemes that require a very different sensing or actuation approach.
+%Ongoing commissioning of current detectors includes the improvement and optimization of the control systems. We expect that many if not most new control techniques or ideas will be tested and implemented in \ac{2G}  interferometers first. However, this is not true for schemes that require a very different sensing or actuation approach.
 
-Similarly to simulations, progress in the development of the required controls is not defined by future technical breakthroughs in the topic itself. Instead we can adapt techniques that have been developed in other areas, such as modern control techniques. Simulation tools can play a crucial role for designing control techniques and they should be further developed or extended for this purpose. More advanced techniques, such as adaptive control or machine learning, might need different and more powerful hardware to run, for example dedicated FPGAs or GPUs. It is important to advance the control design compared to other subsystems, so that controls can inform the overall system design, to avoid designs that make the control harder or impossible. 
+Similarly to simulations, progress in the development of the required controls is not defined by future technical breakthroughs in the topic itself. Instead we can adapt techniques that have been developed in other areas, such as modern control techniques. Simulation tools can play a crucial role for designing control techniques and they should be further developed or extended for this purpose. More advanced techniques, such as adaptive control or machine learning, might need different and more powerful hardware to run, for example dedicated \acp{FPGA}s or \acp{GPU}s. It is important to advance the control design compared to other subsystems, so that controls can inform the overall system design, to avoid designs that make the control harder or impossible. 
 In addition to recommendations listed under Simulation, we recommend that
 \begin{itemize}
 \item control designs be undertaken in advance of other subsystems so that controls can inform the overall design .  Control schemes should be developed and tested early as an integral part of detector designs.
 \item Prototype interferometers be used to validate control schemes when these incorporate a more fundamental change
 \end{itemize}
 
-Ongoing commissioning of current detectors includes the improvement and optimization of the control systems. We expect that many if not most new control techniques or ideas will be tested and implemented in 2G interferometers first. However, this is not true for schemes that require a very different sensing or actuation approach. 
+Ongoing commissioning of current detectors includes the improvement and optimization of the control systems. We expect that many if not most new control techniques or ideas will be tested and implemented in \ac{2G}  interferometers first. However, this is not true for schemes that require a very different sensing or actuation approach. 
 
 
 %\greencomment{Stan: clarify the recommendations}
